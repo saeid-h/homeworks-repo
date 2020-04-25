@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CMP_REP_REQ_FK1" directorySegmentName="seg_0" id="0AAE7B80-6545-F5AB-6B30-A48FC52DD780">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:18:56 UTC</createdTime>
+<generatorID>5E1693D9-809C-CF15-E2AB-C5DFEFDE2E7A</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<sourcePk>F4E4EBDE-62B4-FB9A-33BD-6B5F185583B1</sourcePk>
+<dominantRole>F4047753-40F6-6B98-C3A3-BF4D87440C08</dominantRole>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F4047753-40F6-6B98-C3A3-BF4D87440C08</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>BC5927A7-016D-E2D4-FD00-23AC6CE996F3</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

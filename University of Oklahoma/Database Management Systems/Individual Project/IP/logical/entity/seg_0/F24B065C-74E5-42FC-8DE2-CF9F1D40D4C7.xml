@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F24B065C-74E5-42FC-8DE2-CF9F1D40D4C7" name="PURCHASE">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:18:56 UTC</createdTime>
+<generatorID>74E72073-9AF9-F5B5-E79C-975332EE59F7</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="PID" id="F30D0080-8E82-AED8-DB42-646300A97069">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:18:56 UTC</createdTime>
+<generatorID>7D2774F4-CCFE-7F3D-A434-1198992EAF85</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<referedAttribute>935559BD-D500-A367-8BB0-B56F071872EF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="C NAME" id="B375F614-DBDA-511B-2120-F36206CF541E">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:18:56 UTC</createdTime>
+<generatorID>9A539226-3E48-314F-3629-48DCB612F5AC</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<referedAttribute>5F2D993E-F286-22D0-ED0C-18ACAC68DA3C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C47407FD-874B-ADD9-C2DE-065364BF07CB" name="PURCHASE PK">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:18:56 UTC</createdTime>
+<generatorID>5078E26C-27EF-F898-92ED-E3E4A99332A0</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F30D0080-8E82-AED8-DB42-646300A97069</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

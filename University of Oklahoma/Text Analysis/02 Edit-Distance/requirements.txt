@@ -1,0 +1,13 @@
+appdirs==1.4.0
+fuzzywuzzy==0.14.0
+gitdb2==2.0.0
+GitPython==2.1.1
+nltk==3.2.2
+packaging==16.8
+pyparsing==2.1.10
+pyuca==1.1.2
+PyYAML==3.12
+regex==2017.2.8
+six==1.10.0
+smmap2==2.0.1
+Whoosh==2.7.4

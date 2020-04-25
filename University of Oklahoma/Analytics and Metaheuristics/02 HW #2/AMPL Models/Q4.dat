@@ -1,0 +1,62 @@
+# Shortest Path MCNFP Problem Formulation 
+# Adopted to INFORMS conference problem of assignment #2 
+# created by Charles Nicholson, ISE 5113
+# modified by Saeid Hosseinipoor for homework problem
+
+# use with "Q4.mod" model
+# note: default arc costs and lower bounds are 0
+#      	default arc upper bounds are infinity
+#      	default node requirements are 0
+
+set NODES :=  	shop
+				1s 2s 3s 4s 5s
+				1e 2e 3e 4e 5e
+				;
+
+set ARCS := 	(shop,*) 1s 2s 3s 4s 5s
+				(1s,1e) (2s,2e) (3s,3e) (4s,4e) (5s,5e)
+				(1s,2s) (1e,2s) (2s,3s) (2e,3s) (3s,4s) (3e,4s) (4s,5s) (4e,5s) # WW Laundary
+				(1s,3s) (1e,3s) (2s,4s) (2e,4s) (3s,5s) (3e,5s) 				# CC Laundary
+				(1s,4s) (1e,4s) (2s,5s) (2e,5s) 								# JJ Laundary
+				(*, shop) 1e 2e 3e 4e 5e										# loop
+				;
+
+# note: to make things a little more compact, you can use a "template" 
+# for setting up costs.  See Chapter 9 "Specificying Data" in the AMPL textbook 
+
+
+param c:=		[shop, *]	1s 8 2s 8 3s 8 4s 8 5s 8 	# New
+
+                [1s, 2s]	3.75	[1e, 2s]	3.75	# WW Laudary
+                [2s, 3s]	3.75    [2e, 3s]	3.75	# WW Laudary
+                [3s, 4s]	3.75    [3e, 4s]	3.75	# WW Laudary
+                [4s, 5s]	3.75    [4e, 5s]	3.75	# WW Laudary
+                
+                [1s, 3s]	1.25    [1e, 3s]	1.25	# CC Laudary
+                [2s, 4s]	1.25    [2e, 4s]	1.25	# CC Laudary
+                [3s, 5s]	1.25    [3e, 5s]	1.25	# CC Laudary
+                
+                [1s, 4s]	0.75    [1e, 4s]	0.75	# JJ Laudary
+                [2s, 5s]	0.75    [2e, 5s]	0.75	# JJ Laudary
+                ;
+
+
+param l:=		
+				[1s, 1e] 	400							# Demand day 1
+                [2s, 2e] 	375							# Demand day 2
+                [3s, 3e] 	515							# Demand day 3
+                [4s, 4e] 	395							# Demand day 4
+                [5s, 5e] 	620							# Demand day 5
+                ;
+
+
+param u:=		
+                [1s, 1e] 	400							# Demand day 1
+                [2s, 2e] 	375							# Demand day 2
+                [3s, 3e] 	515							# Demand day 3
+                [4s, 4e] 	395							# Demand day 4
+                [5s, 5e] 	620							# Demand day 5
+                
+                [1s, 4s]	20	    [1e, 4s]	20		# JJ Laudary
+                [2s, 5s]	20	    [2e, 5s]	20		# JJ Laudary
+                ;            

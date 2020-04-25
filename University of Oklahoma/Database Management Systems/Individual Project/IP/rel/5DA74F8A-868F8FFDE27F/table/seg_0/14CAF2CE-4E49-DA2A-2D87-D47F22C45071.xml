@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="14CAF2CE-4E49-DA2A-2D87-D47F22C45071" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="ACCIDENT_RECORD">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>ACCIDENT_RECORD</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:42 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ACCIDENT_ID" id="739242B0-6E69-BCAC-61E5-72F4E811DD18">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>ACCIDENT_RECORD</sourceObjSchema>
+<sourceObjName>ACCIDENT_ID</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACCIDENT_DATE" id="9855A62D-C6E5-DE96-7B15-C25467942435">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>ACCIDENT_RECORD</sourceObjSchema>
+<sourceObjName>ACCIDENT_DATE</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="WORK_DAYS" id="0DB9001E-F1CC-11D4-D594-5A3145521FBE">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>ACCIDENT_RECORD</sourceObjSchema>
+<sourceObjName>WORK_DAYS</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="24A5F9A3-AA2C-E320-A592-0D1E6150E736" name="ACCIDENT_RECORD_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>ACCIDENT_RECORD_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="739242B0-6E69-BCAC-61E5-72F4E811DD18"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F8ADA06F-460F-A261-73D6-D5F00051F980" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="ACCIDENT_RECORD_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>ACCIDENT_RECORD_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="739242B0-6E69-BCAC-61E5-72F4E811DD18"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

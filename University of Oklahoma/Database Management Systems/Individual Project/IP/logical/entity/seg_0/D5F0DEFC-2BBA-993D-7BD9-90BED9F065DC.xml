@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D5F0DEFC-2BBA-993D-7BD9-90BED9F065DC" name="PRODUCT1">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:18:56 UTC</createdTime>
+<generatorID>6812EB74-D851-2A61-E88D-00BD1A818F44</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="PID" id="C011F3D7-0F92-185E-BE62-0B1AA5E3AE13">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:18:56 UTC</createdTime>
+<generatorID>41296F88-C33E-65A5-8922-C673CEF86773</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<referedAttribute>935559BD-D500-A367-8BB0-B56F071872EF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="P SIZE" id="F4C7A364-F625-30AC-2742-B6DBB40B260E">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:18:56 UTC</createdTime>
+<generatorID>59A5E323-C259-B2A5-37A6-BA8ADB4B2A7C</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<referedAttribute>B90B78FB-D4B1-C1B6-192A-21D09530FBBF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SOFTWARE" id="64F91EE2-84E5-A5A9-A277-2675AABF0703">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:18:56 UTC</createdTime>
+<generatorID>B28CC298-F1BC-945F-C929-48613A51D506</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9F466909-4E67-802F-7370-BD9CF36942A0" name="PRODUCT1 PK">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:18:56 UTC</createdTime>
+<generatorID>B53F8381-FDD0-556C-99F5-23F7309DF4BB</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C011F3D7-0F92-185E-BE62-0B1AA5E3AE13</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

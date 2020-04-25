@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="REPAIR_ACCIDENT_FK2" directorySegmentName="seg_0" id="FEBE8FE4-2A04-D1AE-0EAC-6F50E8C42CF2">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:18:56 UTC</createdTime>
+<generatorID>A5B8664A-A733-6A3F-49E9-FE7BA95E629E</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<sourcePk>F4E4EBDE-62B4-FB9A-33BD-6B5F185583B1</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F4047753-40F6-6B98-C3A3-BF4D87440C08</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6ED9675F-EBB9-5F2D-5B69-971595936A46</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

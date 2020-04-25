@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7655A543-F3FA-E407-A72D-837BA1E17FA6" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="CUSTOMER">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>CUSTOMER</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:42 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="C_NAME" id="62301509-6984-3FC9-C541-AD97801BF9E8">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>CUSTOMER</sourceObjSchema>
+<sourceObjName>C_NAME</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADDRESS" id="B273BD1E-910E-0B83-4496-08A1F6F30167">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>CUSTOMER</sourceObjSchema>
+<sourceObjName>ADDRESS</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A905C8CA-5D17-E20D-A8E2-343378F504C5" name="CUSTOMER_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>CUSTOMER_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="62301509-6984-3FC9-C541-AD97801BF9E8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2B9872AF-D8E2-101C-F739-054350A3AD44" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="CUSTOMER_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>CUSTOMER_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="62301509-6984-3FC9-C541-AD97801BF9E8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

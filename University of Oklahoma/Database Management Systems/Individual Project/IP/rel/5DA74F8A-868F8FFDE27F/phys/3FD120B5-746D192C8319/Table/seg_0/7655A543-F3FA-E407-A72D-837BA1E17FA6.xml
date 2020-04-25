@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="CUSTOMER" directorySegmentName="seg_0" id="7655A543-F3FA-E407-A72D-837BA1E17FA6">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:42 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<schemaObject>1EFFAE74-1950-00E2-9075-C68B87AFAFA7</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>671BBA44-978D-C3FC-C7D6-FEB5B2BE026E</segment>
+<tableSpace>8D7BBDD6-7459-8103-AD35-D2EB69273877</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="C_NAME" id="62301509-6984-3FC9-C541-AD97801BF9E8">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ADDRESS" id="B273BD1E-910E-0B83-4496-08A1F6F30167">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="CUSTOMER_PK" id="2B9872AF-D8E2-101C-F739-054350A3AD44">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<schemaObject>1EFFAE74-1950-00E2-9075-C68B87AFAFA7</schemaObject>
+<segment>CE3CCE4A-6D1B-5636-82ED-0D9CD1D87DA7</segment>
+<tableSpace>8D7BBDD6-7459-8103-AD35-D2EB69273877</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CUSTOMER_PK" id="A905C8CA-5D17-E20D-A8E2-343378F504C5">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<segment>CE3CCE4A-6D1B-5636-82ED-0D9CD1D87DA7</segment>
+<tableSpace>8D7BBDD6-7459-8103-AD35-D2EB69273877</tableSpace>
+<existingIndex>2B9872AF-D8E2-101C-F739-054350A3AD44</existingIndex>
+<indexSegment>CE3CCE4A-6D1B-5636-82ED-0D9CD1D87DA7</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

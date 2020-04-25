@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PURCHASE_FK2" directorySegmentName="seg_0" id="9A539226-3E48-314F-3629-48DCB612F5AC">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:18:56 UTC</createdTime>
+<generatorID>02F4A684-D514-1EC7-FE1A-E74051808915</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<sourcePk>8DC3E7D1-6A40-E14B-ABD6-97142693534D</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F2AA290A-E0EF-5FA1-8EC5-B67DD1D31CD8</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F24B065C-74E5-42FC-8DE2-CF9F1D40D4C7</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

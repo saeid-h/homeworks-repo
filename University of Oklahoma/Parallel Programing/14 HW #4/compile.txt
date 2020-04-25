@@ -1,0 +1,1 @@
+gcc -Wall -o CounSort CountSort.c -fopenmp

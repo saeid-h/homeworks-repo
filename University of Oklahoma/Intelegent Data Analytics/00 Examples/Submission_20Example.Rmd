@@ -1,0 +1,119 @@
+---
+title: '**DSA/ISE-5103**'
+subtitle: '**Assignment Submission Example**' 
+author: 'By Alexander Rodriguez'
+date: 'Due to March 17, 2017'
+output: 
+  pdf_document:
+    highlight: haddock
+documentclass: report
+geometry: margin = 0.8in
+---
+
+# About this template
+
+This template is for you to hand in your homeworks with R Markdown. Some important remarks:
+
+* You will find some useful commands especially in the code chucks. **Read the comments in the code chucks!** They are in the Rmd file attached to this PDF.
+* This version is compilable only for PDF, but the commands in the code chucks work well for Word and HTML as well.
+* If you want to use PDF, you need to download TeX. You can follow this [link](https://www.latex-project.org/get/).
+
+```{r, echo = FALSE, warning=FALSE, message= FALSE} 
+# By setting echo to false, the r code in this chuck won't appear on your report
+# By setting warning and message to false, the annoying messages won't appear
+
+# All the libraries statement that your are using have to go in the top of the file
+library(ggplot2) # for data visualization
+library(dplyr) # for data manipulation
+```
+
+# Problem 1: Using code chuncks
+
+### Embed the results in your conclusions / comments
+
+```{r, include = FALSE}
+# If we want to compute this without showing the code neither the results use include = FALSE
+m <- mean(mtcars$hp) # calculation of mean
+s <- sd(mtcars$hp) # calculation of standard deviation
+plot(mtcars$hp) 
+```
+
+Your answer can be as straightforward as the following: "The computed mean for the attribute hp is `r round(m, 2)` and its standard deviation is `r round(s, 2)`. From this we can conclude that ..."
+
+<!-- Notice that we didn't write numbers, only the name of the variables --> 
+
+### Showing only results
+
+If you want to show the results, but not the calculations (R code), then do the following:
+
+```{r, echo = FALSE}
+# Setting echo to false will make your results appear (if you are showing them), but not the code
+quantile_hp <- quantile(mtcars$hp) # taking quantile for hp
+quantile_hp # showing the results from the previous calculation
+```
+
+### Showing only R code
+
+If you want to show the R code because you think it's important, but not to evaluate it, then use *eval = FALSE*:
+
+```{r, eval=FALSE}
+# Set eval to false to avoid evaluation the code chuck
+scale_0to1 <- function(x){(x-min(x))/(max(x)-min(x))} # creating a function to scale from 0 to 1
+```
+
+### Showing R code along with results
+
+If you think some R code and results are needed to be remarked, set echo to TRUE and show it:
+
+```{r}
+# By default your code and results will appear (not recommended)
+glimpse(mtcars) # similar to str 
+```
+
+# Problem 2: Shrinking plots
+
+It's a common problem that your plots are going to be too big to fit in your report. Like the following plot: 
+
+```{r, echo = FALSE}
+# By setting echo to false, the r code in this chuck won't appear on your report
+
+# Plotting weight vs miles per galon
+arc <- ggplot(mtcars, aes(x=wt, y= mpg, col = factor(cyl))) + 
+  geom_point(size = 4.5, alpha=0.6) +
+  geom_smooth(method = "lm", se = F) +
+  xlab("Weigth (lb/1000)") + ylab("Miles/US gallon") + 
+  labs(col= "Cylinders") +
+  stat_smooth(method = "lm", se = F) + 
+  stat_smooth(method="lm", se=F, col = "black", aes(group=1)) +
+  theme_classic()
+arc # showing the plot
+```
+
+You can shrink the plot easily with the *fig* commands, and you'll have the following:
+
+```{r, fig.width=4, fig.height=3, echo=FALSE}
+# You may change the width and the height for your convenience (trial and error)
+arc
+```
+
+We can even make two plots fit in the same space (as two columns):
+
+```{r, fig.width=3.5, fig.height=2.5, echo=FALSE}
+# Just change the width and height
+arc
+arc
+```
+
+Now that you have the perfect plot in the suitable space, **do never forget to comment about it!** If you don't comment/use them for your analysis, then there is no purpose to keep them in your report.
+
+# Final remarks
+
+* Your write-up does not have to contain unnecesary code. Save space for your analysis and results that help your analysis.
+* Each piece of results or plot that you are presenting in the write-up should come along with some analysis.
+* If you have several interesting results, use a table or something creative to show them.
+* You do not have to use R Markdown. It's only one more option for you.
+* Do not forget to submit your R code along with your write-up. If you used R Markdown, you are good to upload your .Rmd file instead of the .R file
+* You can use this code to generate your PDF file and submit it along with your Rmd. 
+* If you use this template, we won't consider the front page in the 10 pages count.
+
+Thank you for reading. Share it if was useful for you!

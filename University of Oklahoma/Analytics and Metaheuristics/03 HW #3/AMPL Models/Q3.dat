@@ -1,0 +1,19 @@
+
+set Supplier := WII WRS WU WOW;
+
+set Market :=	1 2 3 4 5;
+
+
+param Supply :=	WII		10000
+				WRS		15000
+				WU		9000
+				WOW		25000
+				;
+				
+
+param Demand := 1		17000
+				2		18000
+				3		19000
+				4		28000
+				5		32000
+				;

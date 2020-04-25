@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="ACCIDENT_PRODUCTION" directorySegmentName="seg_0" id="402F0116-ABF9-E538-AD16-444FE0789A11">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:42 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<schemaObject>1EFFAE74-1950-00E2-9075-C68B87AFAFA7</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>671BBA44-978D-C3FC-C7D6-FEB5B2BE026E</segment>
+<tableSpace>8D7BBDD6-7459-8103-AD35-D2EB69273877</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="PID" id="040CCBDE-E5BD-4F75-C9B2-1F88C26D9274">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ACCIDENT_ID" id="087411D2-7653-DFD3-B41B-3A2D1E6ACEEB">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="W_NAME" id="633A53AF-F323-051F-F976-6E6449E91AA9">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="ACCIDENT_PK" id="75D7B6E4-4FD4-0FBA-ECA6-FFEF7F70AF7F">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<schemaObject>1EFFAE74-1950-00E2-9075-C68B87AFAFA7</schemaObject>
+<segment>CE3CCE4A-6D1B-5636-82ED-0D9CD1D87DA7</segment>
+<tableSpace>8D7BBDD6-7459-8103-AD35-D2EB69273877</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="PRODUCTION_ACCIDENT_FK1" id="3A677D4F-64D7-0B2A-78A5-836B27A3E5D4">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="ACCIDENT_FK2" id="3CA26027-DECA-F583-F78E-993F5607BB7D">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="ACCIDENT_FK1" id="FF9416FE-9A8D-858A-5171-6D5A86097695">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="ACCIDENT_PK" id="7BBB5D84-3D5F-58A0-A56E-BDDFBFDC09D2">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<segment>CE3CCE4A-6D1B-5636-82ED-0D9CD1D87DA7</segment>
+<tableSpace>8D7BBDD6-7459-8103-AD35-D2EB69273877</tableSpace>
+<existingIndex>75D7B6E4-4FD4-0FBA-ECA6-FFEF7F70AF7F</existingIndex>
+<indexSegment>CE3CCE4A-6D1B-5636-82ED-0D9CD1D87DA7</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

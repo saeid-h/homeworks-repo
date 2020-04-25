@@ -1,0 +1,54 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="ACCIDENT_RECORD" directorySegmentName="seg_0" id="14CAF2CE-4E49-DA2A-2D87-D47F22C45071">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:42 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<schemaObject>1EFFAE74-1950-00E2-9075-C68B87AFAFA7</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>671BBA44-978D-C3FC-C7D6-FEB5B2BE026E</segment>
+<tableSpace>8D7BBDD6-7459-8103-AD35-D2EB69273877</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="WORK_DAYS" id="0DB9001E-F1CC-11D4-D594-5A3145521FBE">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ACCIDENT_ID" id="739242B0-6E69-BCAC-61E5-72F4E811DD18">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ACCIDENT_DATE" id="9855A62D-C6E5-DE96-7B15-C25467942435">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="ACCIDENT_RECORD_PK" id="F8ADA06F-460F-A261-73D6-D5F00051F980">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<schemaObject>1EFFAE74-1950-00E2-9075-C68B87AFAFA7</schemaObject>
+<segment>CE3CCE4A-6D1B-5636-82ED-0D9CD1D87DA7</segment>
+<tableSpace>8D7BBDD6-7459-8103-AD35-D2EB69273877</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="ACCIDENT_RECORD_PK" id="24A5F9A3-AA2C-E320-A592-0D1E6150E736">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<segment>CE3CCE4A-6D1B-5636-82ED-0D9CD1D87DA7</segment>
+<tableSpace>8D7BBDD6-7459-8103-AD35-D2EB69273877</tableSpace>
+<existingIndex>F8ADA06F-460F-A261-73D6-D5F00051F980</existingIndex>
+<indexSegment>CE3CCE4A-6D1B-5636-82ED-0D9CD1D87DA7</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

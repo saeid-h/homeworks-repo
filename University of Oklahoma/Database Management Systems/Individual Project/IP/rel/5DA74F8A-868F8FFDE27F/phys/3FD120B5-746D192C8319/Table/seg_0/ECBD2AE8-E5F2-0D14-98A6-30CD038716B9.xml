@@ -1,0 +1,44 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="REF_QC_TYPE" directorySegmentName="seg_0" id="ECBD2AE8-E5F2-0D14-98A6-30CD038716B9">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:42 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<schemaObject>1EFFAE74-1950-00E2-9075-C68B87AFAFA7</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>671BBA44-978D-C3FC-C7D6-FEB5B2BE026E</segment>
+<tableSpace>8D7BBDD6-7459-8103-AD35-D2EB69273877</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="TYPE" id="277F61EA-177A-9E0A-5D23-9D74F0C3C088">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="REF_QC_TYPE_PK" id="9DE4E167-F436-7CA5-BCAD-41C6E0DC2BFA">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<schemaObject>1EFFAE74-1950-00E2-9075-C68B87AFAFA7</schemaObject>
+<segment>CE3CCE4A-6D1B-5636-82ED-0D9CD1D87DA7</segment>
+<tableSpace>8D7BBDD6-7459-8103-AD35-D2EB69273877</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="REF_QC_TYPE_PK" id="CBD04893-BE22-177F-A5D8-67CA4278CE50">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<segment>CE3CCE4A-6D1B-5636-82ED-0D9CD1D87DA7</segment>
+<tableSpace>8D7BBDD6-7459-8103-AD35-D2EB69273877</tableSpace>
+<existingIndex>9DE4E167-F436-7CA5-BCAD-41C6E0DC2BFA</existingIndex>
+<indexSegment>CE3CCE4A-6D1B-5636-82ED-0D9CD1D87DA7</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

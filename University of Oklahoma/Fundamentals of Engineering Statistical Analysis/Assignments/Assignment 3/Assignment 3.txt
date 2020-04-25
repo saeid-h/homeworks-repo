@@ -1,0 +1,177 @@
+# Assignment 3
+
+
+
+# Q1
+
+# a
+data = read.csv("PHISHING.csv")
+head(data)
+beta = mean(data$INTTIME)
+1 - pexp(120, rate = 1/beta)
+1 - pexp(120, rate = 1/95)
+
+# b
+hist(data$INTTIME, freq=FALSE)
+mean(data$INTTIME)
+sd(data$INTTIME)
+curve(dexp(x, rate = 1/95), add = TRUE, col = "Red")
+
+
+
+
+# Q2
+
+Mu = 3 * 0.07
+Var = 3 * 0.07^2
+SD = sqrt(Var)
+
+Mu - 3*SD
+Mu + 3*SD
+
+1 - pgamma(0.61, shape = 3, scale = 0.07)
+
+
+
+
+# Q3
+
+pgamma(1, shape = 2, scale = 2)
+pgamma(1, shape = 1, scale = 4)
+
+
+
+
+
+# Q4
+
+a = 2; b = 4
+pweibull(2, shape = a, scale = b)
+
+Mu = b^(1/a) * gamma((a+1)/a)
+Var = b^(2/a) *(gamma((a+2)/a) - (gamma((a+1)/a))^2)
+Mu; Var
+
+SD = sqrt(Var)
+pweibull(Mu+2*SD, shape = a, scale = b) - pweibull(Mu-2*SD, shape = a, scale = b)
+Mu-2*SD
+Mu+2*SD
+pweibull(Mu-2*SD, shape = a, scale = 4)
+pweibull(Mu+2*SD, shape = a, scale = 4)
+
+1 - pweibull(6, shape = a, scale = 2)
+
+
+
+# Q5
+
+a = 2; b = 9
+Mu = a / (a + b)
+Var = a * b / ((a + b)^2 * (a + b + 1))
+Mu; Var
+
+1 - pbeta(0.4, shape1 = a, shape2 = b)
+
+pbeta(0.1, shape1 = a, shape2 = b)
+
+
+
+
+# Q6
+
+a = 2; b = 16
+Mu = b^(1/a) * gamma((a+1)/a)
+Var = b^(2/a) *(gamma((a+2)/a) - (gamma((a+1)/a))^2)
+Mu; Var
+
+1 - pweibull(6, shape = a, scale = b)
+
+
+
+
+
+# Q12
+
+a = 1; b = 3; n = 60
+Mu = (a + b) / 2
+Var = (b - a)^2 / 12 / n
+Mu
+Var
+
+SD = sqrt(Var)
+pnorm(2.5, mean = Mu, sd = SD) - pnorm(1.5, mean = Mu, sd = SD)
+
+1 - pnorm(2.2, mean = Mu, sd = SD)
+
+
+
+
+# Q13
+
+p = 0.4; n = 20; q = 1 - p
+Mu = n * p
+SD = sqrt(n*p*q)
+a = (1 + 0.5 - Mu) / SD
+pnorm(a)
+
+pnorm(1 + .5, mean = Mu, sd = SD)
+
+1 - pnorm(11 - 0.5, mean = Mu, sd = SD)
+
+pbinom(1, size = 20, prob = .40)
+1 - pbinom(10, size = 20, prob = .40)
+
+
+
+
+# Q14
+
+Lead = c(1.32, 0, 13.1, .919, .657, 3.0, 1.32, 4.09, 4.45, 0)
+Copper = c(.508, .279, .320, .904, .221, .283, .475, .130, .220, .743)
+
+t.test(Lead, conf.level = 0.99)$conf.int
+
+t.test(Copper, conf.level = 0.99)$conf.int
+
+
+MuL = mean(Lead)
+SDL = sd(Lead)
+MuL - 1.96*SD
+MuL + 1.96*SD
+
+
+
+# Q15
+
+data = read.csv("SOLARAD.csv")
+head(data)
+
+IW = data$IOWA
+ST = data$STJOS
+
+diff = ST - IW
+t.test(diff, conf.level = 0.95)$conf.int
+
+
+
+
+
+# Q16
+
+data = read.csv("DIAZINON.csv")
+head(data)
+
+Day = data$DAY
+Night = data$NIGHT
+diff = Day - Night
+
+t.test(diff, conf.level = 0.90)$conf.int
+
+
+
+
+
+
+
+
+

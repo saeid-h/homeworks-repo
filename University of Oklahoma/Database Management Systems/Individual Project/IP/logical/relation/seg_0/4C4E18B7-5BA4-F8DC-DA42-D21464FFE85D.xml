@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PRODUCTION_ACCIDENT_FK1" directorySegmentName="seg_0" id="4C4E18B7-5BA4-F8DC-DA42-D21464FFE85D">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:18:56 UTC</createdTime>
+<generatorID>5DE2EDF5-7D5C-0ED4-6531-991A56D23355</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<sourcePk>2966D7A7-A6BD-9424-F0D8-05BA7300DFEF</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C94D6E80-3E9A-FD44-53F7-63076F15274F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>BB9573E3-5792-13C2-C53B-EB0A9A84DB02</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

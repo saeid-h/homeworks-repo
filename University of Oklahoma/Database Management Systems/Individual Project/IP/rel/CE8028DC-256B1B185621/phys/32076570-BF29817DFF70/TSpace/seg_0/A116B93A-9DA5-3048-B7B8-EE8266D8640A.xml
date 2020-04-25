@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSpaceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableSpaceOraclev10g" name="HOSS5825" directorySegmentName="seg_0" id="A116B93A-9DA5-3048-B7B8-EE8266D8640A">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-15 14:38:07 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<emUniformSize>0</emUniformSize>
+<extentManagement>LOCAL</extentManagement>
+</TableSpaceOraclev10g>

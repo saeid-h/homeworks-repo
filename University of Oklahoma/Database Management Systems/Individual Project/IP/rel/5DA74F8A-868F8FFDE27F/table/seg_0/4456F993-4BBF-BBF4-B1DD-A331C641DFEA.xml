@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4456F993-4BBF-BBF4-B1DD-A331C641DFEA" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="PRODUCT3">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>PRODUCT3</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:42 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PID" id="08D9799E-7815-50C2-1B08-FC782DB6610E">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>PRODUCT3</sourceObjSchema>
+<sourceObjName>PID</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="786012C1-6D24-8D0A-5257-FE4EC44879B1" referredColumn="DA43959A-FDD1-392C-4EF6-1DCB06AFF5F7"/>
+</associations>
+</Column>
+<Column name="P_SIZE" id="A53AC078-07A5-A28A-5C61-73F9F1BED388">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>PRODUCT3</sourceObjSchema>
+<sourceObjName>P_SIZE</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="WEIGHT" id="C5FB010C-04D2-5502-2B81-37C047141D89">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>PRODUCT3</sourceObjSchema>
+<sourceObjName>WEIGHT</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="35C5817B-3CA5-E786-BFC8-03C0111E7A43" name="PRODUCT3_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>PRODUCT3_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="08D9799E-7815-50C2-1B08-FC782DB6610E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0A527C1C-3EC3-2654-E61A-3637CC0ECC3D" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="PRODUCT3_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>PRODUCT3_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="08D9799E-7815-50C2-1B08-FC782DB6610E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1A8ADA90-1ACB-DBAE-74A6-7031DEC0DB5E" name="PRODUCT3_FK1">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="08D9799E-7815-50C2-1B08-FC782DB6610E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

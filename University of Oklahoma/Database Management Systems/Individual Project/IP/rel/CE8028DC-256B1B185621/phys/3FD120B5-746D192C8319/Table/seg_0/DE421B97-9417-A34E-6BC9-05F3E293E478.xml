@@ -1,0 +1,40 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="EMPLOYEES" directorySegmentName="seg_0" id="DE421B97-9417-A34E-6BC9-05F3E293E478">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-18 22:21:01 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<schemaObject>0503BCCF-421E-5CB6-92DC-473ADDD28093</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ADDRESS" id="A4C525C5-DB27-D901-BFD3-346844726A2D">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-18 22:21:01 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NAME" id="B3C3C1FC-5FAE-13C8-AF34-9A5297CA7DE9">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-18 22:21:01 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="EMPLOYEES_PK" id="C30AADCA-5CC3-37CD-34F5-EB55EEAB7798">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-18 22:21:01 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<schemaObject>0503BCCF-421E-5CB6-92DC-473ADDD28093</schemaObject>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="EMPLOYEES_PK" id="47390C8C-5793-02FB-B06B-A2ED414B7B80">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-18 22:21:01 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

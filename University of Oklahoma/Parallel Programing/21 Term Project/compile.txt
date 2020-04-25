@@ -1,0 +1,4 @@
+OpenMP:
+module load OpenMP
+gcc -g -fopenmp -o test test.c
+./test 4

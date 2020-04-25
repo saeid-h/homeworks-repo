@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="MOVIE" directorySegmentName="seg_0" id="ED4E2AA3-2517-1AB4-833D-3E45A35F0B38">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<schemaObject>8D849F0E-96F6-623C-A7A4-4F6C8DD1D73D</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>8C97F903-09B2-319A-C7F3-117A0FBD2EC4</segment>
+<tableSpace>177FA676-44A1-59D8-F783-AB5EB6DC67BA</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="GENRE" id="26DA33F1-3E09-48D0-1936-204D56214D64">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DID" id="5D50210A-A24E-A167-3990-F7DDDA86552E">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MNAME" id="5FF3BAFE-D7B7-7698-228A-9E9CD0D8B952">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MINUTES" id="890969BA-2C2A-553F-0E9B-4EBCC5EA59ED">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="RELEASE_YEAR" id="94A6A088-901C-CC16-A708-28DD669100B8">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="MOVIE_PK" id="2EF48ED9-25AB-6FFB-E6D9-F6CBADA111BC">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<schemaObject>8D849F0E-96F6-623C-A7A4-4F6C8DD1D73D</schemaObject>
+<segment>1DAA069E-E2C7-64D7-184D-10AA80F379E6</segment>
+<tableSpace>177FA676-44A1-59D8-F783-AB5EB6DC67BA</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="MOVIE_FK1" id="B285EC8D-F711-3385-6B6C-25C349AD35B8">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="MOVIE_PK" id="E467CFFD-D9DC-5B3B-A83B-EE612CB3397C">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<segment>1DAA069E-E2C7-64D7-184D-10AA80F379E6</segment>
+<tableSpace>177FA676-44A1-59D8-F783-AB5EB6DC67BA</tableSpace>
+<existingIndex>2EF48ED9-25AB-6FFB-E6D9-F6CBADA111BC</existingIndex>
+<indexSegment>1DAA069E-E2C7-64D7-184D-10AA80F379E6</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="IP" id="832A3867-3FBA-FF4F-862A-8BDD8E8FBEED" version="3.5">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-15 14:05:57 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>832A3867-3FBA-FF4F-862A-8BDD8E8FBEED</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="D403316A-4350-C425-461B-5FC2B6806976">
+<designStoragePath>/</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="273B44E6-50B0-5986-23C6-31D9F0810424" schemaObject="8D849F0E-96F6-623C-A7A4-4F6C8DD1D73D" name="ACTED">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>ACTED</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 01:03:55 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<importedID>3EC240DF-87DF-FF00-D5BD-6EA4C11927D6</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PID" id="6CF8AEB2-F94B-E291-3928-D2DC2CCA525E">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 01:03:55 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<importedID>9A4452DC-32AA-50E4-5BBF-8AD4B63CBA07</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FAF9F873-C63A-7BAF-EC2D-DA2FE9A0F3DC" referredColumn="D095D053-FC95-159D-FD29-DE7136E67495"/>
+</associations>
+</Column>
+<Column name="MNAME" id="E3462D98-7542-1C3E-724F-CFC820814717">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 01:03:55 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<importedID>15C3EE4A-6050-6DB2-9057-CFBF8ED3374C</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="270BD48E-CE91-E5C7-2A53-CE95340CB60F" referredColumn="5FF3BAFE-D7B7-7698-228A-9E9CD0D8B952"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2C076142-0C1F-2568-235C-57E6A6D503D8" name="ACTED_FK1">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6CF8AEB2-F94B-E291-3928-D2DC2CCA525E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3D7767C3-73F8-D488-5188-CF89A69E31D7" name="ACTED_FK2">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E3462D98-7542-1C3E-724F-CFC820814717"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

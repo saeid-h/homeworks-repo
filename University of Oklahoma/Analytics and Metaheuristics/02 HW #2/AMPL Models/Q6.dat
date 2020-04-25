@@ -1,0 +1,77 @@
+# Shortest Path MCNFP Problem Formulation 
+# Adopted to Boomer airline problem of assignment #2 
+# created by Charles Nicholson, ISE 5113
+# modified by Saeid Hosseinipoor for homework problem
+
+# use with "Q6xxx.mod" models
+# note: default arc costs and lower bounds are 0
+#      	default arc upper bounds are infinity
+#      	default node requirements are 0
+
+set Airport 	:=  	KMLIi	KBOS	KTEB	KDAL	KMLIf;
+
+set Airplane 	:=		CE750	GV;
+
+
+
+param c			:=		KMLIi	3.97
+						KBOS	8.35
+						KTEB	7.47
+						KDAL	6.01
+						KMLIf	3.97
+						;
+
+
+param RFee 		:=		KMLIi	0
+						KBOS	800
+						KTEB	450
+						KDAL	400
+						KMLIf	0
+						;
+						
+param RFlim 	:= 		KMLIi	1
+						KBOS	500
+						KTEB	300
+						KDAL	350
+						KMLIf	1
+						;						
+						
+param Pass 		:= 		KMLIi	2
+						KBOS	2
+						KTEB	4
+						KDAL	0
+						KMLIf	0
+						;
+	
+param FCons :	 		CE750	GV		:= 
+				KMLIi	4800	7200
+				KBOS	2000	3000
+				KTEB	5300	7950
+				KDAL	3100	4650
+				KMLIf	0		0
+				;
+						
+param MWR 		:= 		CE750	36400
+						GV		90900
+						;
+
+param MWL 		:= 		CE750	31800
+						GV		75300
+						;
+						
+param cTank 	:=		CE750	13000
+						GV		14000
+						;
+						
+param BOW 		:= 		CE750	22000
+						GV		48800
+						;
+						
+param eTanklim :=		CE750	2400
+						GV		4500
+						;
+
+param hTank 	:=		CE750	7000
+						GV		8700
+						;
+						

@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="74E72073-9AF9-F5B5-E79C-975332EE59F7" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="PURCHASE">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>PURCHASE</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:42 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PID" id="C13FF6E4-7E74-33BE-D082-26455BCD6F8D">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>PURCHASE</sourceObjSchema>
+<sourceObjName>PID</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8B52CF21-44C3-0BAC-B11A-2F3BF38119BB" referredColumn="DA43959A-FDD1-392C-4EF6-1DCB06AFF5F7"/>
+</associations>
+</Column>
+<Column name="C_NAME" id="B2BCFA84-5D92-DE9C-4AF7-8A388CECAC7E">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>PURCHASE</sourceObjSchema>
+<sourceObjName>C_NAME</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="02F4A684-D514-1EC7-FE1A-E74051808915" referredColumn="62301509-6984-3FC9-C541-AD97801BF9E8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5078E26C-27EF-F898-92ED-E3E4A99332A0" name="PURCHASE_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>PURCHASE_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C13FF6E4-7E74-33BE-D082-26455BCD6F8D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="83199D66-3E9A-06DE-0E0E-24C6E8B78DD0" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="PURCHASE_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>PURCHASE_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C13FF6E4-7E74-33BE-D082-26455BCD6F8D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7BE90F11-AE78-062F-8F5D-3CE5B5CEE923" name="PURCHASE_FK1">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C13FF6E4-7E74-33BE-D082-26455BCD6F8D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4039B596-56D2-7077-2C8E-F83AD598104D" name="PURCHASE_FK2">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B2BCFA84-5D92-DE9C-4AF7-8A388CECAC7E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

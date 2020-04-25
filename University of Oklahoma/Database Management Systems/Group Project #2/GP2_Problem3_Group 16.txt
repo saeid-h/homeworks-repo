@@ -1,0 +1,450 @@
+Table EMPLOYEE created.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+Table EMPLOYEE_PHONE created.
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+Table PERFORMER created.
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+Table PERFORMER_AWARDS created.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+Table CREW created.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+Table DIRECTOR created.
+
+
+Table DIRECTOR_AWARDS created.
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+Table PRODUCER created.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+Table MOVIE created.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+Table CASTING created.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+Table ASSIGNED created.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+Table ATTACHED created.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+Table COORDINATES created.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+Table FILMING_LOCATION created.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+Table AGREEMENT created.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+1 row inserted.
+
+
+Table SIGNED created.
+
+
+1 row inserted.
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+Table SERVICE created.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+1 row inserted.
+
+
+     EMPID EMPNAME                             ADDRESS                                 SALARY DOB       G
+---------- ----------------------------------- ----------------------------------- ---------- --------- -
+       111 Sharon Carter                       123 Alpha St                             50000 12-APR-77 F
+       112 Bucky Barns                         123 Bravo St                             25000 02-JUL-81 M
+       113 Peter Parker                        123 Charlie St                          250000 19-JUL-91 M
+       114 Xander Cage                         123 Delta St                            550000 20-MAR-85 M
+       115 Steve Rodger                        123 Epsilon St                          950000 01-JAN-80 M
+       116 Tony Stark                          123 Foxtrot St                          250000 27-FEB-75 M
+       117 Natasha Romanoff                    123 Golf St                             150000 08-SEP-83 F
+       118 Nick Fury                           123 Hotel St                             52000 29-JUN-81 M
+       119 Scott Lang                          123 India St                            350000 22-JAN-76 M
+       110 Wanda Maximoff                      123 Juliet St                           750000 02-DEC-88 F
+
+ 10 rows selected 
+
+
+     EMPID
+----------
+       112
+       115
+       117
+       119
+
+
+   AWARDID      EMPID AWARD_NAME              
+---------- ---------- -------------------------
+         1        112 Academy Award            
+         2        117 Academy Award            
+         3        112 MTV Movie Award          
+
+     EMPID MNAME                       REL_YEAR ROLE_TYPE               
+---------- ------------------------- ---------- -------------------------
+       112 Sharknado                       2001 Leading Actor            
+       112 Sharknado 2                     2005 Leading Actor            
+       112 Shrek                           2003 Supporting Actor         
+       115 Avengers                        2010 Leading Actor            
+       117 Happy Gilmore                   1999 Cameo                    
+       119 Halloween                       1984 Supporting Actor         
+
+ 6 rows selected 
+
+
+     EMPID JOB_TITLE                 EXPERTISE               
+---------- ------------------------- -------------------------
+       111 Grip 1                    Getting Coffee           
+       118 Electrician               Set wiring               
+
+
+     EMPID MNAME                       REL_YEAR
+---------- ------------------------- ----------
+       111 Avengers                        2010
+       111 Sharknado                       2001
+       111 Sharknado 2                     2005
+       118 Avengers                        2010
+       118 Halloween                       1984
+       118 Happy Gilmore                   1999
+       118 Sharknado                       2001
+
+ 7 rows selected 
+
+
+     EMPID PROF_ORGANIZATION       
+---------- -------------------------
+       110 AARP                     
+       116 NALP                     
+
+
+   AWARDID      EMPID AWARD_NAME              
+---------- ---------- -------------------------
+         1        110 Academy Award            
+         2        116 Academy Award            
+
+
+     EMPID MNAME                       REL_YEAR
+---------- ------------------------- ----------
+       110 Sharknado                       2001
+       116 Avengers                        2010
+
+     EMPID PRANK                     PPOSITION               
+---------- ------------------------- -------------------------
+       113 Executive                 On Set                   
+       114 Associate                 Digital                  
+
+
+     EMPID MNAME                       REL_YEAR
+---------- ------------------------- ----------
+       113 Avengers                        2010
+       113 Sharknado                       2001
+       113 Shrek                           2003
+       114 Happy Gilmore                   1999
+       114 Sharknado                       2001
+       114 Shrek                           2003
+
+ 6 rows selected 
+
+
+MNAME                       REL_YEAR DESIR GENRE               BUDGET PRIM_LANGUAGE 
+------------------------- ---------- ----- --------------- ---------- ---------------
+Sharknado                       2001 NC-17 Action            25000000 English        
+Sharknado 2                     2005 NC-17 Action            50000000 English        
+Avengers                        2010 PG-13 Action           100000000 English        
+Happy Gilmore                   1999 PG    Comedy             5000000 German         
+Halloween                       1984 R     Suspense           2500000 Japanese       
+Shrek                           2003 G     Animation         99000000 German         
+
+ 6 rows selected 
+
+
+MNAME                       REL_YEAR COUNTRY                   CITY                    
+------------------------- ---------- ------------------------- -------------------------
+Sharknado                       2001 Australia                 Sydney                   
+Sharknado 2                     2005 Phillipines               Manila                   
+Avengers                        2010 England                   London                   
+Happy Gilmore                   1999 Germany                   Frankfurt                
+Halloween                       1984 Japan                     Tokyo                    
+Shrek                           2003 Germany                   Munich                   
+
+ 6 rows selected 
+
+
+   AGREEID MNAME                       REL_YEAR
+---------- ------------------------- ----------
+         1 Sharknado                       2001
+         2 Avengers                        2010
+         3 Happy Gilmore                   1999
+         4 Shrek                           2003
+
+
+   AGREEID START_DATE END_DATE      AMOUNT
+---------- ---------- --------- ----------
+         1 01-JAN-99  01-JAN-00    5000000
+         2 01-JAN-03  01-JAN-05    1000000
+         3 01-JAN-01  01-JAN-03     999999
+         4 01-JAN-83  01-JUN-83      25000
+
+   AGREEID STYPE           REQUIREMENTS                                                              
+---------- --------------- ---------------------------------------------------------------------------
+         1 Cleaning        Daily trash collection and clean up                                        
+         2 Security        5 Armed police to control entry and exit                                   
+         3 Cleaning        Weekly trash collection                                                    
+         4 Cleaning        Set teardown and disposal                                                  
+
+
+MNAME                     EMPNAME                                 SALARY COUNTRY                 
+------------------------- ----------------------------------- ---------- -------------------------
+Sharknado                 Wanda Maximoff                          750000 Australia                
+Avengers                  Tony Stark                              250000 England                  
+
+
+COUNTRY                                            COUNT(COUNTRY)
+------------------------- ---------------------------------------
+Germany                                                         2
+
+
+                           TOTAL_SALARY                             AVG(SALARY)
+--------------------------------------- ---------------------------------------
+                                3377000                                  337700
+
+PERFORMERS
+----------
+         2
+
+
+Error starting at line : 339 in command -
+INSERT INTO Performer VALUES(130)
+Error report -
+SQL Error: ORA-02291: integrity constraint (RODR1252.SYS_C0082850) violated - parent key not found
+02291. 00000 - "integrity constraint (%s.%s) violated - parent key not found"
+*Cause:    A foreign key value has no matching primary key value.
+*Action:   Delete the foreign key or add a matching primary key.
+
+Error starting at line : 342 in command -
+INSERT INTO Filming_Location VALUES ('Sharknado', 2001, 'Australia', 'Brisbane')
+Error report -
+SQL Error: ORA-00001: unique constraint (RODR1252.SYS_C0082874) violated
+00001. 00000 -  "unique constraint (%s.%s) violated"
+*Cause:    An UPDATE or INSERT statement attempted to insert a duplicate key.
+           For Trusted Oracle configured in DBMS MAC mode, you may see
+           this message if a duplicate entry exists at a different level.
+*Action:   Either remove the unique restriction or do not insert the key.

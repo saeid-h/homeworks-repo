@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="P3_ACCOUNT" directorySegmentName="seg_0" id="9844C25E-94D2-7268-4316-66DFAC803D8F">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:42 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<schemaObject>1EFFAE74-1950-00E2-9075-C68B87AFAFA7</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>671BBA44-978D-C3FC-C7D6-FEB5B2BE026E</segment>
+<tableSpace>8D7BBDD6-7459-8103-AD35-D2EB69273877</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ACNT_NO" id="6E2C7D37-95A7-DBEC-2297-361C26746DFA">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PID" id="98968E6D-9210-C06D-8612-903AD09FBB27">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="P3_ACCOUNT_PK" id="C05D9448-A05A-BA9F-6A84-594F94C1C3DB">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<schemaObject>1EFFAE74-1950-00E2-9075-C68B87AFAFA7</schemaObject>
+<segment>CE3CCE4A-6D1B-5636-82ED-0D9CD1D87DA7</segment>
+<tableSpace>8D7BBDD6-7459-8103-AD35-D2EB69273877</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="P3_ACCOUNT_FK2" id="0EDD8077-1B87-DD6D-59A9-3E35877A27B7">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="P3_ACCOUNT_FK1" id="40FC551A-701F-6293-F053-8110E345E2A2">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="P3_ACCOUNT_PK" id="5E25CC0C-820D-118A-2CC8-3BCC4590B1A4">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<segment>CE3CCE4A-6D1B-5636-82ED-0D9CD1D87DA7</segment>
+<tableSpace>8D7BBDD6-7459-8103-AD35-D2EB69273877</tableSpace>
+<existingIndex>C05D9448-A05A-BA9F-6A84-594F94C1C3DB</existingIndex>
+<indexSegment>CE3CCE4A-6D1B-5636-82ED-0D9CD1D87DA7</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

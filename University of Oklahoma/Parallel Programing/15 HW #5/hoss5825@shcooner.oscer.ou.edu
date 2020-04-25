@@ -1,0 +1,15 @@
+
+
+#include	<stdio.h>
+#include	<stdlib.h>
+
+
+int main (void){
+	cudaDeviceProp	myDevProp;
+	int k, count = 0;
+	cudaGetDeviceCount(&count);
+	for (k = 0; k < count; k++){
+	      cudaGetDeviceProperties(&myDevProp, k);
+	// print out the properties you are interested in
+	}
+ }

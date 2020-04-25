@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="200C028C-AD32-D85B-BCD1-AAE689A3B00C" schemaObject="0503BCCF-421E-5CB6-92DC-473ADDD28093" name="REF_DEGREE">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-15 14:39:31 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<importedID>32EAE6AC-562C-FF0C-6081-2FA0F5E3BA31</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DEGREE" id="7C63660D-EA31-A196-9715-559D7A81042B">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-15 14:39:31 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<importedID>04C6B4F3-FD13-F564-A49F-D15227BCEB3A</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3E7C8EFF-528A-34E8-C564-49666DC3D58B" name="REF_DEGREE_PK">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-15 14:39:31 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<importedID>8FB81AB7-FC8B-6379-C21F-5B99A519A1BD</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C63660D-EA31-A196-9715-559D7A81042B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BA5333D3-99CA-2A4F-192A-49ADC5594C27" schemaObject="0503BCCF-421E-5CB6-92DC-473ADDD28093" name="REF_DEGREE_PK">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-15 14:39:31 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<importedID>6F35F535-B79A-47EB-D443-20733C3693A0</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C63660D-EA31-A196-9715-559D7A81042B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

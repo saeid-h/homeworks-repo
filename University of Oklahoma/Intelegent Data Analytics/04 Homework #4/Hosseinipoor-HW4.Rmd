@@ -1,0 +1,375 @@
+---
+title: 'Assignment #4'
+author: "Saied Hosseinipoor"
+date: "10/31/2016"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include=FALSE}
+library(jpeg)
+library(ggplot2) #to make pretty plots
+library(caret)
+library(car)
+library(MASS)
+library(hydroGOF)
+library(pls)
+library(lars)
+library(polycor)
+library(glmnet)
+library(Matrix)
+library(foreach)
+```
+
+```{r, include=FALSE}
+#a function to use ggplot2 to create scree plots
+ggscreeplot <- function(pcobj, k=10, type = c('pev', 'cev')) 
+{
+  type <- match.arg(type)
+  d <- pcobj$sdev^2
+  yvar <- switch(type, 
+                 pev = d / sum(d), 
+                 cev = cumsum(d) / sum(d))
+  
+  yvar.lab <- switch(type,
+                     pev = 'proportion of explained variance',
+                     cev = 'cumulative proportion of explained variance')
+  
+  df <- data.frame(PC = 1:length(d), yvar = yvar)
+  
+  ggplot(data = df[1:k,], aes(x = PC, y = yvar)) + 
+    xlab('principal component number') + ylab(yvar.lab) +
+    geom_bar(stat="identity",alpha=0.4,fill="blue",color="grey") + geom_line()
+}
+```
+
+---------------------------------------------------------------------------------------
+
+## Problem 1
+```{r, include=FALSE}
+# Fetch data from csv files
+classDigits = read.csv("classDigits.csv", header = T)
+class7Test = read.csv("class7Test.csv", header = T)
+
+```
+
+### Problem 1 - part a
+Principla Component Analysis (PCA) in R studio is performed by prcomp function. Eigen vectors are part of the results as $rotation variable. Part of the vectors are as follows:
+
+```{r, echo=FALSE}
+digits.data = as.matrix(classDigits[,2:785])           # Copies the pixel data in a matrix
+digits.PCA = prcomp(digits.data)                       # Runs PC Analusis and stores the results
+digits.Eigen.Vector = as.matrix(digits.PCA$rotation)   # Stores the eigen vectors in a separated variable
+digits.Eigen.Vector[1:4, 1:4]                          # Shows a small part of the eigen vectors
+
+```
+
+
+### Problem 1 - part b
+The variable $center is mean value for the data set. After Reshaphing the mean data into a 28x28 matrix results the Figure 1. It is saved as file named meanDigits.jpeg.
+
+```{r, include=FALSE}
+digits.mean = as.matrix(digits.PCA$center)             # Store mean value of digit space
+digits.mean.matrix = 
+  matrix(digits.mean, nrow = 28, ncol=28, byrow = T)   # Makes a 28x28 matrix to show the picture
+
+```
+
+```{r, fig.align="center", fig.cap="Mean Digit Illustration", echo=FALSE, message=FALSE, warning=FALSE}
+image(digits.mean.matrix, 
+      col = grey(seq(0, 1, length = 256)))             # Shows the gray scale image of the mean digit
+```
+
+### Problem 1 - part c
+A loop has been constructed to reconstruct images #15 and #100 with lower dimensions and saves them in the separate files. The following R code was used for this part.
+
+```{r}
+X.mean = t(digits.mean)
+for (img in c(15, 100)){                                      # Outer loop for images
+  for (k in c(5, 20, 100)){                                   # Inner loop for dimensions
+    X = digits.data[img,]                                     # Pick the image data
+    E = digits.Eigen.Vector[,1:k]                             # Pick the eigen vectors
+    weight = digits.PCA$x[img, 1:k]                           # Calulate the weight values
+    new.image = X.mean + weight %*% t(E)                      # Reconstruct the image
+    new.image = matrix(new.image, 
+                       nrow = 28, ncol=28, byrow = T)         # Converts data into a matrix to show
+    image.name = 
+      do.call("paste0", list("image", img, "-", k, ".jpg"))   # Make proper file name
+    jpeg(image.name, width = 2800, height = 2800, res = 600)  # Open a jpeg output
+    image(new.image, col = grey(seq(0, 1, length = 256)))     # Write the image into a jpeg output
+    dev.off()                                                 # Save the jpeg file
+  }
+}
+```
+
+
+### Problem 1 - part d
+There are several ways to choose pricipal components which are the dimension of the target space inder to solve the problem in less complex space. One of them is to plot the PCA and find the elbow. Other way is to consider a cut off number like 90% which is a criterion to keep a certain amount of the variances. Here the graphical way illustrated in Figure 2, but the numerical method was considered to choose proper k. To maintain 90% of the variance, 87 components have been selected.
+
+```{r, fig.align="center", fig.width=3, fig.height=4, fig.cap="Mean Digit Illustration", echo=FALSE, message=FALSE, warning=FALSE}
+# Investigation of the minumum number of the dimensions
+print(ggscreeplot(digits.PCA, k = 100))
+
+```
+
+
+```{r}
+s = summary(digits.PCA)$importance[3,]
+names(s[s>.9][1])
+
+```
+
+To calculate the Mahalanobis distance for each point in test data set, first, the differennce between the point and mean digit space were calculated. Then the points have been projected into the new space. All the digit of digit space also projected into the new space. The Mahalanobis distances were calculated and the mean value of the distances for each point of the test data set reported.
+
+```{r}
+k = 87                                                             # Choose a k from above (I chose from 90%)
+X = as.matrix(class7Test[,3:786])                                  # Rest Data set
+E = digits.Eigen.Vector[,1:k]                                      # Eigen vectors
+X.mean = matrix(rep(digits.mean, 7), 
+                nrow = 7, ncol = 784, byrow = T)                   # Mean digit from digit space
+X.diff = X - X.mean                                                # Deviation form mean digit
+test.projection = X.diff %*% E                                     # Map test data into new space
+training.projection = digits.PCA$x[ ,1:k]                          # Map training data into the new sapce
+projection.corr = cov(training.projection)                         # Calculates the covariance
+
+mahala.mean = rep(0,7)                                             # Empty matrix
+for(i in 1:7){
+  mahala.mean[i] = mean(mahalanobis(                               # Calculates the mean values for distances
+    training.projection, test.projection[i,], projection.corr))    # Calculates the mah. distances
+}
+mahala.mean   
+```
+
+
+### Problem 1 - part d
+In this section a two loops are applied to determine the minumum dimension required to recognize the digit in the test data set. The outer loop counts the image number. It starts from image number 4 to image number 6. The inner loop count the target dimension. It start with k = 1, then finds the Mahalanobis distance of the image to the all images in the digit space. The lable of the closet point is examined if it is same as our test lable, we found the correct answer, but if they are not same the loop runs for next value of the k until find the right answer.
+
+```{r}
+for (img in 4:6){
+  k = 1
+  repeat {
+    X = as.matrix(class7Test[,3:786])
+    E = digits.Eigen.Vector[,1:k]
+    X.mean = matrix(rep(t(as.matrix(digits.mean)), 7), 
+                    nrow = 7, ncol = 784, byrow = T)
+    X.diff = X - X.mean
+    test.projection = X.diff %*% E
+    training.projection = as.matrix(digits.PCA$x[ ,1:k] )
+    projection.corr = cov(training.projection)
+    
+    a = which.min(mahalanobis(
+      training.projection, test.projection[img,], projection.corr))
+    predict.lable = classDigits[a, 1]
+    test.lable = class7Test[img, 2]
+    
+    if (predict.lable == test.lable || k > 784) break
+    k = k + 1
+  }
+  print (k)
+}
+
+```
+
+
+
+---------------------------------------------------------------------------------------
+
+## Problem 2
+```{r, include=FALSE}
+housingData = read.csv("housingData.csv", header = T)
+housingTest = read.csv("housingTest.csv", header = T)
+housingData.clean = housingData
+```
+
+### Problem 2 - part a
+First, the missing data and their structure was investigated, then the variables with more than 20% missing values including ***LotFrontage***, ***Alley***, ***FireplaceQu***, ***PoolQC***, ***Fence***, and ***MiscFeature*** were deleted. LotPrice variable also converted into the **log price**.
+
+```{r, echo=FALSE, message=FALSE}
+housingData.missing = rep(0, length(housingData))
+for (i in 1:length(housingData)){
+  housingData.missing[i] = sum(is.na(housingData[,i]))
+}
+housingData.missing
+which(housingData.missing > 0)
+which(housingData.missing > 100)
+names(housingData[which(housingData.missing > 100)])
+housingData.clean = housingData[,-c(1, 2, 5, 7, 55, 68, 69, 70)]
+housingData.clean$LogSalePrice = log(housingData.clean$SalePrice)
+housingData.clean$SalePrice = NULL
+```
+In order to explore the useful variables, all the variables plotted against to the target variable and they were selected visuallu at the first step.
+
+```{r, include=FALSE}
+housingData.model = housingData.clean
+
+```
+
+
+```{r, echo=FALSE}
+fitHousing = lm(LogSalePrice ~ . , data = housingData.model)
+```
+
+Some of the variables have been deleted from the data set:
+
+```{r, include=FALSE}
+housingData.model = housingData.clean
+housingData.model$LotShape = NULL
+housingData.model$LandContour = NULL
+housingData.model$LotConfig = NULL
+housingData.model$BldgType = NULL
+housingData.model$HouseStyle = NULL
+housingData.model$RoofStyle = NULL
+housingData.model$Exterior1st = NULL
+housingData.model$Exterior2nd = NULL
+housingData.model$MasVnrType = NULL
+housingData.model$BsmtCond = NULL
+housingData.model$BsmtExposure = NULL
+housingData.model$BsmtType = NULL
+housingData.model$BsmtFinType2 = NULL
+housingData.model$Heating = NULL
+housingData.model$HeatingQC = NULL
+housingData.model$LowQualFinSF = NULL
+housingData.model$BsmtHalfBath = NULL
+housingData.model$HalfBath = NULL
+housingData.model$BedroomAbvGr = NULL
+housingData.model$Functional = NULL
+housingData.model$GarageType = NULL
+housingData.model$GarageCond = NULL
+housingData.model$PoolArea = NULL
+housingData.model$MiscVal = NULL
+housingData.model$MoSold = NULL
+housingData.model$YrSold = NULL
+housingData.model$MasVnrArea = NULL
+```
+
+To visulize the data, numeric and categorial variables have been separated to check. 
+
+```{r, fig.align="center", fig.cap="Predictor Correlations", message=FALSE, warning=FALSE}
+attach(housingData.model)
+numerics = sapply(housingData.model, is.numeric)
+housingData.model.numerics = housingData.model[,numerics]                             
+
+factors = sapply(housingData.model, is.factor)
+housingData.model.factors = housingData.model[,factors]
+housingData.model.factors = cbind(housingData.model.factors, housingData.model$LogSalePrice)      
+
+numericsCor = cor(housingData.model.numerics)                                   
+corrplot(numericsCor, method = "circle")                          
+```
+
+```{r, fig.align="center", fig.cap="Predictor Correlations", message=FALSE, warning=FALSE, echo=FALSE}
+par(mfrow=c(2,2))
+plot(LogSalePrice~YearBuilt, data = housingData.model)
+plot(LogSalePrice~OverallQual, data = housingData.model)
+plot(LogSalePrice~CentralAir, data = housingData.model)
+plot(LogSalePrice~GrLivArea, data = housingData.model)
+par(mfrow=c(1,1))
+```
+By checking the different paramters and drawings, some more variables were deleted. One of the important paramters was the signeifance level listed in summary and also the vif value for each variable. adj-R^2 and standard error also were considered.
+```{r, include=FALSE}
+housingData.model$GarageQual = NULL
+housingData.model$PavedDrive = NULL
+housingData.model$TotRmsAbvGrd = NULL
+housingData.model$ExterQual = NULL
+housingData.model$ExterCond = NULL
+housingData.model$GarageFinish = NULL
+housingData.model$GarageYrBlt = NULL
+housingData.model$BsmtFinType1 = NULL
+housingData.model$BsmtQual = NULL
+housingData.model$Foundation = NULL
+housingData.model$TotalBsmtSF = NULL
+housingData.model$MSZoning = NULL
+```
+
+```{r}
+fitHousing = lm(LogSalePrice ~ . , data = housingData.model)
+summary(fitHousing)
+AIC(fitHousing); BIC(fitHousing)
+mean(vif(fitHousing))
+ncvTest(fitHousing)
+defaultSummary(data.frame(obs=housingData.clean$LogSalePrice,pred=predict(fitHousing, housingData.clean)))
+```
+At the end, a stepwise modeling using ***stepAIC*** function was examined.
+
+```{r}
+fitHousing.step = stepAIC(fitHousing, direction = "both", trace = FALSE)
+AIC(fitHousing.step); BIC(fitHousing.step)
+mean(vif(fitHousing.step))
+ncvTest(fitHousing.step)
+```
+This is the final result for stepAIC:
+```{r}
+fitHousing.step$call
+```
+
+### Problem 2 - part b
+100 observations were kept for vlidation purpose. The rest of data were used to establish the model. The predictor variables were chosen based on the previous section analysis.
+
+```{r, fig.align="center", fig.cap="Residual Plots", message=FALSE, warning=FALSE}
+housingData.model.b = housingData.model[101:1000,]
+fitHousing.b = lm(LogSalePrice ~ ., data = housingData.model.b)
+AIC(fitHousing.b); BIC(fitHousing.b)
+mean(vif(fitHousing.b))
+temp = anova(fitHousing.b)
+par(mfrow=c(2,2)); plot(fitHousing.b); par(mfrow=c(1,1)) 
+ncvTest(fitHousing.b)
+fitHousing.b$xlevels [["OverallCond"]] = union(levels(housingData.model$OverallCond), 
+                                               fitHousing.b$xlevels [["OverallCond"]])
+predict.b = predict(fitHousing.b, housingData.model[1:100,])
+defaultSummary(data.frame(obs=housingData.clean$LogSalePrice[1:100], pred = predict.b))
+
+```
+
+### Problem 2 - part c
+All the data were used to build the PLS model. The following code shows the procedure and results.
+
+```{r, fig.align="center", fig.cap="Component Selection in PLS Model", message=FALSE, warning=FALSE}
+housingData.model.c = housingData.clean
+pls.fit <- plsr(LogSalePrice~., data=housingData.model.c, validation="CV")
+
+pls.CVRMSE <- RMSEP(pls.fit, validation = "CV")
+str(pls.CVRMSE)
+plot(pls.CVRMSE)
+(min<-which.min(pls.CVRMSE$val[1,1,]))
+points(min-1,pls.CVRMSE$val[1,1,min],col="red",cex=1.5, lwd=2)
+
+pls.pred <- predict(pls.fit, housingData.model.c,ncomp=1:24)
+residual.c = pls.pred - housingData.model.c$LogSalePrice
+```
+
+### Problem 2 - part d
+A model based on LASSO was built. The foloowing code shows the procedure and results.
+
+```{r, fig.align="center", fig.cap="LASSO Model", message=FALSE, warning=FALSE}
+housingData.model.d = housingData.clean
+lasso.ctrl = trainControl(method="cv", number=5)                     
+lasso.model = train(LogSalePrice ~., 
+                    data = housingData.model.d, na.action = na.exclude,      
+                    trControl=lasso.ctrl, method="glmnet")               
+plot(lasso.model)
+
+lasso.model$bestTune
+lasso.model$resample$RMSE
+lasso.model$resample$Rsquared
+lasso.model$results
+```
+
+
+### Problem 2 - part e
+The linear model built on the previous sections was used to predict the given data set.
+
+```{r}
+housingData.test = read.csv("housingTest.csv", header = TRUE)     
+housingData.test = housingData.test[,c(-1,-2)]                              
+
+pred.e = predict(fitHousing, housingData.test)
+SalesPrice = exp(pred.e)
+```
+
+
+
+
+

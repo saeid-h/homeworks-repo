@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="18DDF627-1926-FEA4-39CC-E92F8F091A14" schemaObject="8D849F0E-96F6-623C-A7A4-4F6C8DD1D73D" name="PERFORMER">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>PERFORMER</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<importedID>04ADE65F-9CA5-6151-186F-7716A276B4D8</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PID" id="D095D053-FC95-159D-FD29-DE7136E67495">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>PERFORMER</sourceObjSchema>
+<sourceObjName>PID</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<importedID>FE074EB2-0392-E902-A324-3EE5B6646CDF</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PNAME" id="68C5AC20-D7BB-7C87-AC39-1F785CFE2F86">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>PERFORMER</sourceObjSchema>
+<sourceObjName>PNAME</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<importedID>A184F3F7-3BB5-04E9-6754-19FDBE863935</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="YEARS_OF_EXPERIENCE" id="FFB4DE30-B34D-6F0D-A343-38C7F374049D">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>PERFORMER</sourceObjSchema>
+<sourceObjName>YEARS_OF_EXPERIENCE</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<importedID>E149E66C-4F09-CB85-A4F1-C6CF4E92E776</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AGE" id="7896DE79-DDB4-9B98-C648-663632B60CC4">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>PERFORMER</sourceObjSchema>
+<sourceObjName>AGE</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<importedID>9BD06D90-3371-ECF1-4775-A8F9FEBB7EC9</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="13ECCAA3-BB1F-7524-BE78-927526C6E5A3" name="PERFORMER_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>PERFORMER_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<importedID>1A5048FB-27A7-4E3C-BCE1-0394DB8D3D3A</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D095D053-FC95-159D-FD29-DE7136E67495"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6C167E19-F8C2-453B-FBDB-411F5B4CC6CE" schemaObject="8D849F0E-96F6-623C-A7A4-4F6C8DD1D73D" name="PERFORMER_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>PERFORMER_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<importedID>1A8554EB-415F-EB41-01A4-ACD3BF5570C2</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D095D053-FC95-159D-FD29-DE7136E67495"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="PERFORMER_CHK1" directorySegmentName="seg_0" id="451CD373-033D-9043-943B-245B439DF4A3">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>PERFORMER_CHK1</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<importedID>85BE0115-8023-58CC-78CF-78696D31774E</importedID>
+<rule>Years_of_experience &lt; age</rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

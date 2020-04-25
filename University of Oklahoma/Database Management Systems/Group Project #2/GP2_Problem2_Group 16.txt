@@ -1,0 +1,190 @@
+Table PERFORMER created.
+
+
+1 row inserted.
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+1 row inserted.
+
+
+Table DIRECTOR created.
+
+
+1 row inserted.
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+Table MOVIE created.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+Table ACTED created.
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+       PID PNAME                               YEARS_OF_EXPERIENCE        AGE
+---------- ----------------------------------- ------------------- ----------
+         1 Morgan                                               48         67
+         2 Cruz                                                 14         28
+         3 Adams                                                 1         16
+         4 Perry                                                18         32
+         5 Hanks                                                36         55
+         6 Hanks                                                15         24
+         7 Lewis                                                13         32
+
+ 7 rows selected 
+
+
+       DID DNAME                                 EARNINGS
+---------- ----------------------------------- ----------
+         1 Parker                                  580000
+         2 Black                                  2500000
+         3 Black                                    30000
+         4 Stone                                   820000
+
+
+MNAME                               GENRE              MINUTES                            RELEASE_YEAR        DID
+----------------------------------- --------------- ---------- --------------------------------------- ----------
+Jurassic Park                       Action                 125                                    1984          2
+Shawshank Redemption                Drama                  105                                    2001          2
+Fight Club                          Drama                  144                                    2015          2
+The Departed                        Drama                  130                                    1969          3
+Back to the Future                  Comedy                  89                                    2008          3
+The Lion King                       Animation               97                                    1990          1
+Alien                               Sci-Fi                 115                                    2006          3
+Toy Story                           Animation              104                                    1978          1
+Scarface                            Drama                  124                                    2003          1
+Up                                  Animation              111                                    1999          4
+
+ 10 rows selected 
+
+
+       PID MNAME                             
+---------- -----------------------------------
+         1 The Departed                       
+         2 Fight Club                         
+         3 Fight Club                         
+         4 Alien                              
+         4 Fight Club                         
+         4 Up                                 
+         5 Fight Club                         
+         5 Shawshank Redemption               
+         6 Shawshank Redemption               
+
+ 9 rows selected 
+
+PNAME                             
+-----------------------------------
+Hanks                              
+Morgan                             
+
+
+    OLDEST
+----------
+        67
+
+
+MNAME                             
+-----------------------------------
+Back to the Future                 
+Fight Club                         
+Shawshank Redemption               
+
+DNAME                                      DID
+----------------------------------- ----------
+Black                                        2
+Black                                        3
+
+
+GENRE         
+---------------
+Animation      
+
+
+PNAME                                      PID
+----------------------------------- ----------
+Hanks                                        5
+
+
+GENRE           AVG_LENGTH
+--------------- ----------
+Comedy                  89
+Animation              104
+Sci-Fi                 115
+Drama               125.75
+Action                 125
+
+1 row updated.
+
+
+2 rows deleted.
+

@@ -1,0 +1,38 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="ACTED" directorySegmentName="seg_0" id="273B44E6-50B0-5986-23C6-31D9F0810424">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:21 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<schemaObject>8D849F0E-96F6-623C-A7A4-4F6C8DD1D73D</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>4F0B87EA-7B4C-8DB7-C6D4-0522F062063A</segment>
+<tableSpace>177FA676-44A1-59D8-F783-AB5EB6DC67BA</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="PID" id="6CF8AEB2-F94B-E291-3928-D2DC2CCA525E">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:21 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MNAME" id="E3462D98-7542-1C3E-724F-CFC820814717">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:21 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="ACTED_FK1" id="2C076142-0C1F-2568-235C-57E6A6D503D8">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="ACTED_FK2" id="3D7767C3-73F8-D488-5188-CF89A69E31D7">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+</TableProxyOraclev12c>

@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="P2_ACCOUNT_FK2" directorySegmentName="seg_0" id="AF4686CE-5A2E-A319-CD24-D39CE6BF592C">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:18:56 UTC</createdTime>
+<generatorID>7E86BA3F-63FD-4273-5073-8A83EEEBCFE5</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<sourcePk>24DB7E56-4D6F-BE43-A1E9-C889CFD070ED</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7BEE7CA5-C834-8385-BFF5-37799AC56609</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F1F117DD-E498-4387-3D74-CDC5DD3687B0</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

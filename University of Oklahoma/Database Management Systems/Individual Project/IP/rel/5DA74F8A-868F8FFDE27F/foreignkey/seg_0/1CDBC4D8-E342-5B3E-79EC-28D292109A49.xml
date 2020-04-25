@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="1CDBC4D8-E342-5B3E-79EC-28D292109A49" containerWithKeyObject="24ADEB76-B1B1-6228-7CCF-6557E6994312" localFKIndex="DDE5262A-C13D-F733-D57A-CB8CE2004E9B" name="REPAIR_ACCIDENT_FK3">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>REPAIR_ACCIDENT_FK3</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>DEC7A848-F443-7DBD-70C5-6BC2BEF909F1</referredTableID>
+<keyObject>28013C80-9EA2-0305-0287-3207955E9392</keyObject>
+<referredKeyID>28013C80-9EA2-0305-0287-3207955E9392</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

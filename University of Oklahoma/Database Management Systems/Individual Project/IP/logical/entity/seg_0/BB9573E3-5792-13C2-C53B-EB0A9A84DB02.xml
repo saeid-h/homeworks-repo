@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BB9573E3-5792-13C2-C53B-EB0A9A84DB02" name="ACCIDENT PRODUCTION">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:18:55 UTC</createdTime>
+<generatorID>402F0116-ABF9-E538-AD16-444FE0789A11</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ACCIDENT ID" id="570FC274-808C-0AD1-5BFB-3864CBC69DD2">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:18:55 UTC</createdTime>
+<generatorID>5BD52147-5E71-1E0A-E6A2-44ED22654C44</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<referedAttribute>89D99C8C-92C6-5073-1B42-3D4694F661ED</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PID" id="3CF893DB-2440-3242-E837-97AE5E7E5AEC">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:18:55 UTC</createdTime>
+<generatorID>B662D33F-FEC3-72BC-EBBB-A470AFFFF651</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<referedAttribute>935559BD-D500-A367-8BB0-B56F071872EF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="W NAME" id="55BDB7DF-2952-5455-A9AF-7A566162359F">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:18:55 UTC</createdTime>
+<generatorID>4C4E18B7-5BA4-F8DC-DA42-D21464FFE85D</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<referedAttribute>6BFA1290-3928-18BE-F0A1-48A154627A97</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5362515B-B383-0603-6445-1A661E41E0E5" name="ACCIDENT PK">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:18:55 UTC</createdTime>
+<generatorID>7BBB5D84-3D5F-58A0-A56E-BDDFBFDC09D2</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>570FC274-808C-0AD1-5BFB-3864CBC69DD2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

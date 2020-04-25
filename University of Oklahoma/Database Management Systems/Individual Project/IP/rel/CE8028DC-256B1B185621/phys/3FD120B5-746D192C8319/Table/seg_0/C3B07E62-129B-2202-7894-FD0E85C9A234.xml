@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="ACCIDENT_RECORD" directorySegmentName="seg_0" id="C3B07E62-129B-2202-7894-FD0E85C9A234">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-18 22:21:01 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<schemaObject>0503BCCF-421E-5CB6-92DC-473ADDD28093</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ACCIDENT_DATE" id="18787F71-8C44-983C-31F5-71524A50C8EC">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-18 22:21:01 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ACCIDENT_NO" id="428C2EBB-C0A7-2D59-694D-160283F45082">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-18 22:21:01 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="WORK_DAYS" id="F7B52586-66DD-0463-85CD-6622E5034310">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-18 22:21:01 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="ACCIDENT_RECORD_PK" id="66C6CB07-5968-1DB0-B327-7E5339A2A403">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-18 22:21:01 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<schemaObject>0503BCCF-421E-5CB6-92DC-473ADDD28093</schemaObject>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="ACCIDENT_RECORD_PK" id="EC929AE5-691A-BB46-A464-62D95E6CA3C5">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-18 22:21:01 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

@@ -1,0 +1,369 @@
+---
+title: "Assignmnet #3"
+author: "Saeid Hosseinipoor"
+date: "10/7/2016"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include=FALSE}
+library(mlbench)
+library(VIM)
+library(ggplot2)
+library(GGally)
+library(robustbase)
+library(ggbiplot)
+library(reshape2)
+library(Amelia)
+library(lattice)    
+library("car")        #<-- used to get Prestige dataset; and 'symbox' function
+library("EnvStats")   #<-- used to get "boxcox" function
+library(MASS)
+library(mice)
+```
+
+---------------------------------------------------------------------------------------
+
+## Problem 1
+### 1a)
+
+```{r, include=FALSE}
+data(Glass)       # Load data from the package "mlbench"
+```
+Some tecniques were applied to investigate the distribution, and the relationship between the predictor variables. The following figures shows that there are not exist strong linear relationship between the predictors except ***Refractive Index*** and ***Calcium***. This implies that calcium and reflactive index are correlated and we may use one of them or combination of them as a single predictor which one is easier. 
+
+The weak linear relationship between predictors never deny existance of nonlinear correlations. Visualization helps us to realize whether any pattern is available in plotted data. By looking at the plots, I would say some nonlinear correlations could be discovered between ***Aluminum*** and ***Calcium*** or ***Sodium***.
+
+Moderate linear correlations either negative or positive are aviable between these pairs: *RI/Si*, *Mg/Al*, *Mg/Ba*, *Ba/Al*, and *RI/Al*.
+
+```{r, fig.align="center", fig.cap="Glass Data Visualization", echo=FALSE, warning=FALSE, message=FALSE}
+pairs(Glass[1:9], main = "", pch=21, bg = Glass$Type )
+#fig.height=5, fig.width=6,
+```
+
+Some of ions like *Mg*, *Ba*, and *Fe* have values of zero. Looking into chemistry of the glasses releavs that these ions are not essential part of the glasses, but they carries some identifications such as color of galss. Therefore; they would be very useful to classify the glasses as we have a variable as type.
+
+```{r, fig.align="center", fig.height= 3, fig.width= 6,  fig.cap="Relationship Between Reflactive Index and Calcium Ion.", echo=FALSE, warning=FALSE, message=FALSE}
+ggplot(data=Glass, aes(x=Ca,y=RI))+ geom_point(aes(fill=Type), alpha=I(.75), colour="black", pch=21, size=5)+
+  theme_bw()+ labs(y="y", x="x") + theme(legend.key=element_blank(), axis.title = element_text(size = 14))#fig.height=5, fig.width=6,
+```
+
+```{r,  fig.align="center", fig.cap="Predictor Correlations", echo=FALSE, message=FALSE, warning=FALSE}
+ggpairs(Glass, lower=list(continuous="smooth"),axisLabels='show')
+```
+Adjusted box plots shows there is some outliers in data set.
+
+```{r,fig.align="center", fig.height=8, fig.cap="Adjusted Boxplots for Glass Data", }
+Ion = c("RI", "Na", "Mg", "Al", "Si", "K", "Ca", "Ba", "Fe")    # Ion vector
+par(mfrow=c(3,3))
+for (i in Ion){
+  adjbox(data=Glass, RI ~ Type, xlab="Type", ylab=i, main="Adjusted")}
+par(mfrow=c(1,1))               # Reset display
+```
+Skewness for predicors were calculated. It shows that some predictors are highly skewed.
+
+```{r}
+apply(Glass[,1:9], 2, skewness)
+
+```
+
+
+### 1b)
+
+The skewness calculations show that ***Potasium***, ***Barium***, and ***Calcium*** are three most skewed values in glass data set. Iron and Refractive index are also highly skewed. *symbox* and *boxcox* fuctions confirmed the findings as well.
+
+
+```{r,  fig.align="center", fig.height=8, fig.cap="Symbox Function Results on Galss Data", echo=FALSE, message=FALSE, warning=FALSE}
+par(mfrow=c(3,3))               # Divides the screen into three sections
+for (i in 1:9) {
+  symbox(Glass[,i]+1e-12, 
+         powers=c(3,2,1,0,-0.5,-1,-2),
+         ylab = Ion[i])
+}
+par(mfrow=c(1,1))               # Reset display
+```
+
+
+```{r,  echo=FALSE, message=FALSE, warning=FALSE}
+lambda.opt <- rep(1, 9)
+names(lambda.opt) <- names(Glass[,1:9])
+for (i in 2:9) {
+  a <- EnvStats::boxcox(Glass[,i]+1e-27, optimize = TRUE, lambda=c(-10,10))    # if optimize = TRUE, then you must tell the function the 
+  lambda.opt[i] <- a$lambda
+}
+```
+
+```{r}
+lambda.opt
+```
+* Optimum values of lambda are numbers with decimal points. It is very important to select a rounded number which could describe the model physically. Noises and erorrs involved in data collection and registration may suggest this values mathematically but a good analyzer always select more logical and simple model.
+
+### 1c)
+Pricipal component analysis shows that, we can reduce the dimension from 9 variables into 5 variables keeping about 90% of the variance of data. More investigation on the data and PCs by *ggbiplot* indicates that ***Silisium***, ***Calcium***, and ***Refractive Index*** narates smae story and could be collaped on a single component. They may have different direction but are in same line.
+
+
+```{r, include=FALSE}
+Glass.PCA<-prcomp(Glass[,1:9],scale=TRUE)
+Glass.PCA
+
+plot(Glass.PCA)
+summary(Glass.PCA)
+par(mfrow=c(1,2))               # Divides the screen into three sections
+ggbiplot(Glass.PCA,obs.scale = 1, var.scale = 1, circle = TRUE, choices = c(1,2))
+ggbiplot(Glass.PCA,obs.scale = 1, var.scale = 1, circle = TRUE, choices = c(1,5))
+par(mfrow=c(1,1))               # Reset display
+
+```
+
+### 1d)
+PCA is an unsupervised method which reduces the problem dimensions keeping data variance as much as possible. On the other hand, LDA is a supervised method which uses the given data to produce a simpler and more accurate model. Here, in our data, table shows that LDA did a very good job in classification of group 7, but its performance was tribble in group 3. For other gruops, the result could acceptale depending on our desire. 
+
+```{r, include=FALSE}
+fit.LDA <- lda(formula = Type ~ ., data = Glass)   # The function lda on the Glass types
+fit.predict <- predict(fit.LDA, newdata=Glass[,1:9])$class
+table(fit.predict, Glass[,10])
+```
+
+---------------------------------------------------------------------------------------
+
+## Problem 2
+
+```{r, include=FALSE}
+data(freetrade)   # Load data from the package "Amelia"
+freetrade$year <- as.numeric(freetrade$year)        # Converting to number
+freetrade$country <- as.factor(freetrade$country)   # Converting to factor
+freetrade$polity <- as.numeric(freetrade$polity)    # Converting to number
+freetrade$signed <- as.numeric(freetrade$signed)    # Converting to number
+```
+
+### 2a)
+Here is the code for regression using listwise deletetion. The results and outputs are nor shown but are available in R code attached to this write down.
+
+```{r, message=FALSE, warning=FALSE}
+freetrade.LD <- na.omit(freetrade)  #listwise deletion
+freetrade.LD.fit <- lm(data = freetrade.LD,
+                   tariff~year+country+polity+pop+gdp.pc+intresmi+signed+fiveop+usheg) 
+```
+
+```{r, include=FALSE}
+summary(freetrade.LD.fit)
+sf.a <- summary(freetrade.LD.fit)
+coef.a <- sf.a[[4]]
+se.a <- sf.a[[6]]
+```
+
+### 2b)
+Following code was provided to perform regression after using mean imputation:
+
+```{r, message=FALSE, warning=FALSE}
+freetrade.mimp <- freetrade
+freetrade.mimp[is.na(freetrade.mimp$tariff), "tariff"] <- mean(freetrade.mimp$tariff,na.rm=T)
+freetrade.mimp[is.na(freetrade.mimp$polity), "polity"] <- mean(freetrade.mimp$polity,na.rm=T)
+freetrade.mimp[is.na(freetrade.mimp$intresmi), "intresmi"] <- mean(freetrade.mimp$intresmi,na.rm=T)
+freetrade.mimp[is.na(freetrade.mimp$signed), "signed"] <- mean(freetrade.mimp$signed,na.rm=T)
+freetrade.mimp[is.na(freetrade.mimp$fiveop), "fiveop"] <- mean(freetrade.mimp$fiveop,na.rm=T)
+
+freetrade.mimp.fit <- lm(data=freetrade.mimp, 
+                         tariff ~ year + country + polity + pop + gdp.pc 
+                         + intresmi + signed + fiveop + usheg)
+```
+
+```{r, include=FALSE}
+summary(freetrade.mimp.fit)
+sf.b <- summary(freetrade.mimp.fit)
+coef.b <- sf.b[[4]]
+se.b <- sf.b[[6]]
+```
+
+### 2c)
+Following code was provided to perform regression after using multiple imputation. Different methods such as *mean*, *rf*, *sample*, and *cart*. The lastest one has been used to perform regression. More details are availabel in R script.
+
+```{r, message=FALSE, warning=FALSE}
+freetrade.MI <- mice(freetrade, m=5, maxit=10, method="cart", printFlag = FALSE)
+freetrade.MI.copmlete <-complete(freetrade.MI, "long")   #Complete Imputed data
+
+freetrade.MI.fit <- with(freetrade.MI, 
+                         lm(tariff ~ year + country + polity + 
+                              pop + gdp.pc + intresmi + signed + fiveop + usheg))
+```
+
+
+```{r, include=FALSE}
+summary(pool(freetrade.MI.fit))
+sf.c <- summary(freetrade.MI.fit)
+coef.c <- sf.c[[4]]
+se.c <- sf.c[[6]]
+```
+
+### 2d)
+As can be seen by using mean imputation the coeficient would not be changed. However, the coeficient of mice is highly related to the method we are choosing. Imputations based on the modeling use the model as a prediction. They may add some noises to the predicted value, but the reality is that those values are not the missing valuse. If the missing values were missed in the heart of data set and much points are surounded the missing values, we have a lot of chance to catch a very close value to the missed one by using the models. If the missing values are part of a cut, we can not say if the predicted model on part of data works for another part in darkness. We can not say that model could be extrapolated.
+
+```{r, message=FALSE, warning=FALSE}
+predictorMatrix<-freetrade.MI$predictorMatrix #Extract matrix from earlier
+predictorMatrix[,5] <- 0
+
+# single imputation on different variables with different methods
+freetrade$polity <- as.factor(freetrade$polity)    # Converting to factor
+freetrade$signed <- as.factor(freetrade$signed)    # Converting to factor
+freetrade.SI <- mice(freetrade, method=c("","","norm","polr","","","norm","logreg","norm",""),
+                     predictorMatrix = predictorMatrix, printFlag = FALSE) 
+freetrade.SI.fit <- with(freetrade.SI,
+                         lm(tariff~year+country+polity+pop+gdp.pc+intresmi+signed+fiveop+usheg)) 
+
+
+data.frame(coef.a[,1], coef.b[,1])
+```
+
+
+```{r, include=FALSE}
+summary(freetrade.SI.fit)
+sf.d <- summary(freetrade.SI.fit)
+coef.d <- sf.d[[4]]
+se.d <- sf.d[[6]]
+```
+
+### 2e)
+The listwise deletion produces best fit for the data though with very low degrees of freedom.For pooled regression using multiple imputation, the countries Korea and Pakistan, Polity and gdp.pc have the most significant coefficients.For pooled regression using single imputation, the countries Pakistan and Thailand, Polity and fiveop have the most significant coefficients.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+temp <- summary(freetrade.LD.fit)
+temp <- summary(freetrade.mimp.fit)
+temp <- summary(pool(freetrade.MI.fit))
+temp <- summary(pool(freetrade.SI.fit))
+```
+
+### 2f)
+I would say listwise deletion showed the best results amoung the other methods. Therefore, I would suggest to use this method istead of imputation.
+
+
+---------------------------------------------------------------------------------------
+
+## Problem 3
+```{r, include=FALSE}
+Sensor.Data <- read.csv(file="bridgeSensor.csv", head=TRUE, sep=",")  # Load data from csv file
+
+#helper function to plot the frequency spectrum based 
+plot.frequency.spectrum <- function(X.k, xlimits=c(0,length(X.k)/2)) {
+  plot.data  <- cbind(0:(length(X.k)-1), Mod(X.k))
+  
+  plot(plot.data, t="h", lwd=2, main="", 
+       xlab="Frequency (Hz)", ylab="Strength", 
+       xlim=xlimits, ylim=c(0,max(Mod(plot.data[,2]))))
+}
+```
+
+### 3a)
+The goal of this research is to identify a vehicle automatically based on its weight, number of axels, aerodynamics etc. Sensors on the brige record the vibrations in a very small time snaps. There are several thought here may help to understand and simplify the problem:
+* Looking into the available daya shows taht when a vehicle passes the brigde, we can distinguish two frequency peaks. They could be representative of vehicle's axels. Because the axels and attached tires are the points that touch the bridge and make the vibration.
+* The frequency is also a charateristics which depends on the vehicle's weight and speed. The hevier vehicle will generate stronger waves. It also could be an indicator for speed of a specific vehicle.
+* The difference between the start and end time of a wave may imply on the length and speed of the vehicle.
+* The frequency itself could be related to a specific vehicle. It could be a characteristic signal of a vehicle.
+* The ratio of two peaks also might be important.
+
+```{r, include=FALSE}
+Sensor11 <- Sensor.Data[1:801,c(1,2)]
+Sensor12 <- Sensor.Data[802:length(Sensor.Data$Time),c(1,2)]
+Sensor21 <- Sensor.Data[1:801,c(1,3)]
+Sensor22 <- Sensor.Data[802:length(Sensor.Data$Time),c(1,3)]
+
+S11 <- fft(Sensor11$Sensor1)
+S12 <- fft(Sensor12$Sensor1)
+S21 <- fft(Sensor21$Sensor2)
+S22 <- fft(Sensor22$Sensor2)
+
+```
+
+```{r, echo=FALSE, fig.cap="Wave Strength vs. Frequency" }
+par(mfrow=c(2,2))
+PS11  <- cbind(0:(length(S11)-1), Mod(S11))
+plot(PS11, t="h", lwd=2, main="Sensor=1 / Truck=1", xlab="Frequency (Hz)", ylab="Strength",
+     xlim=c(0,length(S11)/2), ylim=c(0,max(Mod(PS11[,2]))))
+
+PS12  <- cbind(0:(length(S12)-1), Mod(S12))
+plot(PS12, t="h", lwd=2, main="Sensor=1 / Truck=2", xlab="Frequency (Hz)", ylab="Strength",
+     xlim=c(0,length(S12)/2), ylim=c(0,max(Mod(PS12[,2]))))
+
+PS21  <- cbind(0:(length(S21)-1), Mod(S21))
+plot(PS21, t="h", lwd=2, main="Sensor=2 / Truck=1", xlab="Frequency (Hz)", ylab="Strength",
+     xlim=c(0,length(S21)/2), ylim=c(0,max(Mod(PS21[,2]))))
+
+PS22  <- cbind(0:(length(S22)-1), Mod(S22))
+plot(PS22, t="h", lwd=2, main="Sensor=2 / Truck=2", xlab="Frequency (Hz)", ylab="Strength",
+     xlim=c(0,length(S22)/2), ylim=c(0,max(Mod(PS22[,2]))))
+par(mfrow=c(1,1))
+
+```
+
+
+```{r, echo=FALSE, fig.cap="Wave Signals" }
+sens1fft<-fft(Sensor.Data$Sensor1)
+sens2fft<-fft(Sensor.Data$Sensor2)
+
+#plot signal 1 and signal 2
+par(mfrow=c(2,2))
+plot(Sensor.Data$Time, Sensor.Data$Sensor1, type = "l",main="Sensor 1 Wave", col=2); abline(h=0)
+plot(Sensor.Data$Time, Sensor.Data$Sensor2, type = "l",main="Sensor 2 Wave", col=3); abline(h=0)
+#plot fourier transform for frquency spectrum
+plot.frequency.spectrum(sens1fft)
+plot.frequency.spectrum(sens2fft)
+par(mfrow=c(1,1))
+
+```
+
+
+
+### 3b)
+```{r, eval=FALSE, message=FALSE, warning=FALSE}
+#1.
+#Sensor 1 / Truck 1
+max(abs(Sensor11$Sensor1))
+#Sensor 1 / Truck 2
+max(abs(Sensor12$Sensor1))
+#Sensor 2 / Truck 1
+max(abs(Sensor21$Sensor2))
+#Sensor 2 / Truck 2
+max(abs(Sensor22$Sensor2))
+
+#from the maximum absolute value above it can be understand that the Truck 1 has less weight than Truck 2
+
+#2.
+#Sensor 1 / Truck 1
+max(PS11[,2])
+#Sensor 1 / Truck 2
+max(PS12[,2])
+#Sensor 2 / Truck 1
+max(PS21[,2])
+#Sensor 2 / Truck 2
+max(PS22[,2])
+
+#Using the maximum value of the furior the same result can be drawn which Truck 1 is heavier than Trcuk 2.
+
+#3.
+#Sensor 1 / Truck 1
+which.max(PS11[1:(length(PS11[,2])/2),2])
+#Sensor 1 / Truck 2
+which.max(PS12[1:(length(PS12[,2])/2),2])
+#Sensor 2 / Truck 1
+which.max(PS21[1:(length(PS21[,2])/2),2])
+#Sensor 2 / Truck 2
+which.max(PS22[1:(length(PS22[,2])/2),2])
+
+#4.
+Sensor.Data$strength1 <- Mod(sens1fft) #strength1 for sensor 1
+Sensor.Data$strength2 <- Mod(sens2fft) #strength2 for sensor 2
+Sensor.Data$ang1 <- Arg(sens1fft) #fft angle for sensor 1
+Sensor.Data$ang2 <- Arg(sens2fft) #fft angle for sensor 2
+#interaction between strength and frequency
+Sensor.Data$str.fre1 <- (Sensor.Data$Time-Sensor.Data$Time[1])*Sensor.Data$strength1*100
+Sensor.Data$str.fre2 <- (Sensor.Data$Time-Sensor.Data$Time[1])*Sensor.Data$strength2*100
+head(Sensor.Data,7)
+```
+
+### 3c)
+The bigest problem in this part was lack of information. We just had two observations where collected from an unknown bridge. For the data analysis problems which follows the statistical rules and techniques, we need more observations and data records to build a model and analysis data.
+
+Data shortage hindered us to find a pattern in data set. It also was the main reason that we were not able to use supervised method.
+

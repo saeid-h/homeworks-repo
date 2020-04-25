@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3FF3B937-916C-F26F-36E5-4D9D635101F7" name="TECH STAFF">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:08:25 UTC</createdTime>
+<generatorID>4D9FD230-D5EC-9501-028A-58D30475B068</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="E NAME" id="EE3A5C06-4E43-D8E9-B19C-9B04BBBEBD1B">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:08:25 UTC</createdTime>
+<generatorID>83DD1203-74A2-53F2-7BB3-31EE371EB415</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<referedAttribute>F64053C4-8F46-9001-8B8E-6A14362D2A42</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EDUCATION" id="6CB144A4-7A6F-857B-DAAA-04D1444CB80A">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:08:25 UTC</createdTime>
+<generatorID>20CCEE5A-934D-B8A1-379A-546F537322F5</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>356C4CC3-2C4C-DF7F-A7BC-21CF2476D9D2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="POSITION" id="FE90A9E9-8DDE-7CD6-57EC-CAAECDE30135">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:08:25 UTC</createdTime>
+<generatorID>1CD7CCBF-DED5-80E3-6B44-DA25896A1C26</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="143A5BBD-FC1E-4E1C-32C0-AC84D1D810C3" name="TECH STAFF PK">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:08:25 UTC</createdTime>
+<generatorID>BB00560B-F79B-72A5-5971-AA3D8472D0E1</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EE3A5C06-4E43-D8E9-B19C-9B04BBBEBD1B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

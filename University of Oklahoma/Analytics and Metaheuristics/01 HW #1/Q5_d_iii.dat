@@ -1,0 +1,61 @@
+
+set Products := 	Whole Juice Paste;
+
+set Tomatos := 		A	B;
+
+
+
+
+param Variable_Cost := 		Whole	2.52
+							Juice	3.18
+							Paste	1.95;
+							
+							
+param Fixed_Cost := 		Whole	0
+							Juice	0
+							Paste	0;						
+
+
+param Selling_Price := 		Whole	4.00
+							Juice	4.50
+							Paste	3.80;						
+
+
+param lb_per_case := 		Whole	18
+							Juice	20
+							Paste	25;	
+
+param req_Qulity := 		Whole	8
+							Juice	6
+							Paste	5;	
+
+param Demand := 			Whole	800000
+							Juice	50000
+							Paste	80000;	
+							
+param Fruit_Cost := 		Whole	1.10
+							Juice	1.22
+							Paste	1.53;	
+														
+																				
+							
+param Availability := 		A		750000
+							B		2400000;
+							
+param Quality := 			A		9
+							B		5;
+							
+param Price := 				A		0.0612
+							B		0.0612;
+							
+
+
+
+
+
+
+
+	
+							
+	
+				

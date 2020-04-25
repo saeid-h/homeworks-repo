@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="90F78F8C-419D-0220-4E20-3C12A290C83B" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="WORKER">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>WORKER</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="E_NAME" id="5B475AED-395A-3837-151D-F4A0DC1DD058">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>WORKER</sourceObjSchema>
+<sourceObjName>E_NAME</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6746A705-5D7C-6600-9730-A60B03828C25" referredColumn="A0D38B63-122E-50DC-7683-028E6D5CC590"/>
+</associations>
+</Column>
+<Column name="MAX_PRODUCTION" id="B25A0A2B-7F24-151B-D10C-0233B5DBD3A6">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>WORKER</sourceObjSchema>
+<sourceObjName>MAX_PRODUCTION</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="57BF77C7-254B-9679-97CE-F1ADB0A1190B" name="WORKER_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>WORKER_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5B475AED-395A-3837-151D-F4A0DC1DD058"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4D48CF55-9F2C-E119-F4E2-66846813A507" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="WORKER_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>WORKER_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5B475AED-395A-3837-151D-F4A0DC1DD058"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C44B7C6D-2188-CB67-5CE7-78A894FAE493" name="WORKER_FK1">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5B475AED-395A-3837-151D-F4A0DC1DD058"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CF2F0634-A169-2CA2-B957-0D0B2FA2AA2B" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="COMPLAINT">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>COMPLAINT</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:42 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="COMP_ID" id="012BC1D6-6B68-1ABC-5F06-9E4EEAA36B76">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>COMPLAINT</sourceObjSchema>
+<sourceObjName>COMP_ID</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PID" id="73DC9025-A1A4-D2C6-AC88-B861B15A7E5D">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>COMPLAINT</sourceObjSchema>
+<sourceObjName>PID</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6D2ACD03-9E1E-32A2-598C-0ECBC5E160B9" referredColumn="DA43959A-FDD1-392C-4EF6-1DCB06AFF5F7"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2A70E2C1-1536-DBA8-8970-43CE2DEB17B5" name="COMPLAIN_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>COMPLAIN_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="012BC1D6-6B68-1ABC-5F06-9E4EEAA36B76"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D8B086C3-4B66-135E-D1C9-F007D61DBB67" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="COMPLAIN_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>COMPLAIN_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="012BC1D6-6B68-1ABC-5F06-9E4EEAA36B76"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7B5DF011-6DAE-F256-1504-417DB74FC9DC" name="COMPLAIN_FK2">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="73DC9025-A1A4-D2C6-AC88-B861B15A7E5D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F205BE02-112C-36AA-74D0-E2FFBCE6E3FA" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="COMPLAINT_LIST">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>COMPLAINT_LIST</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:42 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="COMP_ID" id="C25D2D92-93B0-425B-04C9-F2CA537BB984">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>COMPLAINT_LIST</sourceObjSchema>
+<sourceObjName>COMP_ID</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COMP_DATE" id="61AD35E8-4636-CE3F-CD15-1E678BE33853">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>COMPLAINT_LIST</sourceObjSchema>
+<sourceObjName>COMP_DATE</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPTION" id="80270F76-AB5B-1C01-EC0D-730EBBBD56BC">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>COMPLAINT_LIST</sourceObjSchema>
+<sourceObjName>DESCRIPTION</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TREATMENT" id="37656B35-A4D1-8E3D-6327-FD8180062609">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>COMPLAINT_LIST</sourceObjSchema>
+<sourceObjName>TREATMENT</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6DBD2140-3AB5-4F14-AF30-D4660A79E687" referredColumn="CD7EB5C6-3791-454C-2B49-29312EEE821B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="00C7540A-9C5F-DBD4-F815-B08E25C0182F" name="COMPLAIN_LIST_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>COMPLAIN_LIST_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C25D2D92-93B0-425B-04C9-F2CA537BB984"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="101ED317-9877-E292-7AAE-72736BF48018" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="COMPLAIN_LIST_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>COMPLAIN_LIST_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C25D2D92-93B0-425B-04C9-F2CA537BB984"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CE9C038E-D0F5-0FD3-F24B-5119A43E2329" name="COMPLAIN_LIST_FK1">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="37656B35-A4D1-8E3D-6327-FD8180062609"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

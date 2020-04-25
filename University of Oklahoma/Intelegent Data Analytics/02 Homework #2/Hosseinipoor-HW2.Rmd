@@ -1,0 +1,406 @@
+---
+title: 'Assignment #2'
+author: "Saied Hosseinipoor"
+date: "September 20, 2016"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include=FALSE}
+library(reshape2); library(ggplot2); library(robustbase); library(outliers); library(plyr); 
+library(fitdistrplus); library(Amelia); library(mice); library(HSAUR2); library(ggbiplot);
+```
+
+```{r, include=FALSE}
+library(reshape2); library(ggplot2); library(robustbase); library(outliers);
+library(fitdistrplus); library(Amelia); library(mice); library(plyr); 
+library(HSAUR2); library(ggbiplot); library(VIM)
+
+#generalized ESD test -- adapted from code available on stackoverflow.com
+# helper function
+# Compute the critical value for ESD Test
+esd.critical <- function(alpha, n, i) {
+  p = 1 - alpha/(2*(n-i+1))
+  t = qt(p,(n-i-1))
+  return(t*(n-i) / sqrt((n-i-1+t**2)*(n-i+1)))
+}
+
+#main function
+removeoutliers = function(y,k=5,alpha=0.05) {
+  
+  if (k<1 || k >= length(y))
+    stop ("the number of suspected outliers, k, must be in [1,n-1]")
+  
+  ## Define values and vectors.
+  y2 = y
+  n = length(y)
+  toremove = 0
+  tval<-NULL
+  ris<-NULL
+  
+  ## Compute test statistic until r values have been removed from the sample.
+  for (i in 1:k){
+    if(sd(y2)==0) break
+    ares = abs(y2 - mean(y2))/sd(y2)
+    Ri = max(ares)
+    y2 = y2[ares!=Ri]
+    
+    tval<-c(tval,esd.critical(alpha,n,i))
+    ris<-c(ris,Ri)
+    ## Compute critical value.
+    if(Ri>esd.critical(alpha,n,i))
+      toremove = i
+  }
+  
+  # Values to keep
+  if(toremove>0){
+    outlierLevel = sort(abs(y-mean(y)),decreasing=TRUE)[toremove]
+    o = y[abs(y-mean(y)) >= outlierLevel]
+    y = y[abs(y-mean(y)) < outlierLevel]
+  }
+  
+  RVAL <- list(numOutliers=toremove,outliers=o,cleandata=y,critical=tval,teststat=ris)
+  return (RVAL) 
+}
+```
+
+---------------------------------------------------------------------------------------
+
+## Problem 1
+### 1a)
+The results for **concordant** and **discordant** are **6** and **15** resepectively.
+
+```{r}
+x = c(3, 4, 2, 1, 7, 6, 5); y = c(4, 3, 7, 6, 5, 2, 1)
+# Calculate the Concordance and Discordance based on the definition
+C = 0; D = 0
+for(i in 1:length(x))
+  for(j in 1:length(y)){
+    if(x[i] < x[j]){
+      if(y[i] < y[j]) 
+        C = C + 1 
+      if(y[i] > y[j]) 
+        D = D + 1
+    }
+  }
+C; D
+```
+
+
+---------------------------------------------------------------------------------------
+
+## Problem 2
+### 2a)
+Four sets of random numbers (*a-d*) have been generated in different distributions: *Normal, Chi square, Log normal, and Exponential distributions*. The variales combined into a data frame (*df*) and then data frame melted into a new data frame (*df2*).
+
+```{r, include=FALSE}
+# Generate random variables:
+a = rnorm(500)                                  # Normal Distribution
+b = rchisq(500, 5)                              # Chi Square Distribution
+c = rexp(500)                                   # Exponentioal Distribution
+d = rlnorm(500)                                 # Log Normal Distribution
+df = data.frame(a, b, c, d)                     # Make a data frame from random variables
+df2 = melt(df, variable.name = "groupVar")      # Reshape the data
+```
+
+```{r}
+head (df, 3)
+head (df2, 3)
+```
+
+### 2b)
+The figure illustrates the density function for the random data sets. Different distributions have different behavior as shown in the 
+
+```{r, fig.height=2, fig.width=6, fig.align="center", fig.cap="Density Plot for Generated Random Variables", echo=FALSE}
+# Using ggplot to visulize the densities
+ggplot(df2, aes(x = value, fill = groupVar)) +
+  geom_density(alpha = 0.3) +          #set geometry and transparency    
+  labs(x = "Random Variable",           #set x-label and title
+       title = "Densities for Random Distributions")
+```
+
+---------------------------------------------------------------------------------------
+
+## Problem 3
+
+### 3a)
+The dataset contains information ranging from early dates, when the flow of information and record of all the incidents was doubous. This data might be misleading sometimes. The early dates information might not reflect the current nature of the problem, and the volume of the information with those dates are very low. In addition, some data from very old times might be incorrect. 
+
+### 3b)
+```{r }
+Shark.attack = read.csv("ISE 5103 GSAF.csv")        # Reads data from the file
+GSAFdata = Shark.attack[Shark.attack$Year >= 2000,] # Deletes the records before 2000
+GSAFdata$Date.old = GSAFdata$Date                   # Keep the old date values
+GSAFdata$Date <- as.Date(GSAFdata$Case.Number , 
+                         "%Y.%m.%d")                # Converts and stores the dates as date format
+```
+
+### 3c)
+As mentioned above, the data from very begining which are recorded from the early acient times could be misleading. It is better to cut off the old data and use the more accurate one for better and concise results. The next step is cleaning and polishing the the date attribute in data set. To clean up the date feild, we can use **"Date"** sttribute. We will face to two types of problem here:
+
+1. Some instances of field carry extra and unnecessary information that voilate the standard format of data as a date (e.g. *"Reported on 03-Mar-2000"*).
+
+2. Some instances may have standard form but are not usable in our application (e.g.  *"Jun-2000"*).
+
+Fortunately, there is filed named **"Case.Number"** which is in a form that we can avoid the problem no. 1 and just convert them into a correct date with one line code. The dates with the second problem converted into ***NA***.
+
+### 3d)
+According to the method I used, the percentage of missing data is about 2.3%. If we choose the **Date** feild to clean up the data set, we would gain a percentage of 7.4% which more work on cleaning will result less percentage but not 2.3%.
+
+### 3e)
+
+```{r, include=FALSE}
+# Calculates ratio of missing dates respect to total records
+GSAFdata.missing.ratio <- nrow(GSAFdata[is.na(GSAFdata$Date),]) / nrow(GSAFdata)
+round(GSAFdata.missing.ratio*100,1)       # Percentage of missing values
+```
+
+```{r}
+GSAFdata <- GSAFdata[!is.na(GSAFdata$Date),]    # Deletes missing data respect to date
+```
+
+#### 3f-i)
+
+```{r}
+daysBetween <- diff(GSAFdata$Date)          # Calculates the interval between attacks
+GSAFdata$DaysBetween <- c(NA, daysBetween)  # Add the new vaiable to data frame
+```
+
+#### 3f-ii)
+
+```{r, fig.height=3, fig.width=6, fig.align="center", fig.cap="Box Plot and Ajusted Box Plot for Shark Attack Intervals", echo=FALSE}
+par(mfrow=c(1,2))               # Divides the screen into two sections
+boxplot(GSAFdata$DaysBetween, col = rainbow(5))   # Box plot
+adjbox(GSAFdata$DaysBetween, col = rainbow(10))    # Adjusted box plot
+par(mfrow=c(1,1))               # Resets the screen in normal
+```
+
+Box plot, as seen in figure, assumes the distribution is normal. Therefore it suggests a lot of points as outliners.  In Figure, the boxplot reveals that the median is closer to first quartile than third quartile and hence data is positively skewed. The adjusted box plot does not have an assumtion on the distributuion. It shows a more reasonable outliners than regular box plot.
+
+#### 3f-iii)
+
+```{r, include=FALSE}
+temp <- grubbs.test(GSAFdata$DaysBetween)         # Grubb's test
+days.ouliers <- removeoutliers(daysBetween, 20, 0.05) # General ESD test
+```
+
+```{r, include=FALSE}
+GSAFdata.inlyers <- GSAFdata[GSAFdata$DaysBetween < 27,] # Stores the varuable inliners
+GSAFdata.inlyers <- GSAFdata.inlyers[-1,]             # Deletes the first row (NA data)      
+```
+
+The result p-value in Grubb's test shows that the biggest value definitly is a ouliner. This test doesn't say anything about the more data if the next biggest number is also a ouliner or not. The Generalized ESD test shows that we have 14 outliners. Both test agreed on the most extrim value but Grubb's test didn't give any information about the next values.
+
+The main problem associated with these methods is they are assuming the data are distributed normally. The adjusted box plot showed us that data may not follow the normal distribution. It is possible to have different distribution like ***exponential*** or ***log-normal*** ditribution. Therefore it is better to use adjusted box plot to omit the outliers.
+
+### 3g)
+
+```{r, fig.height=3, fig.width=6, fig.align="center", fig.cap="Histogram and Q-Q Plots for Shark Attack Intervals", echo=FALSE}
+par(mfrow=c(1,2))               # Divides the screen into two sections
+hist(GSAFdata.inlyers$DaysBetween,      # Shark Attack Interval Histogram
+     xlab = "Shark Attack Interval (Days)",
+     ylab = "Frequency",
+     main = "")
+qqplot(GSAFdata.inlyers$DaysBetween, # Q-Q plot for Shark Attack Interval
+       12*rexp(length(GSAFdata.inlyers$DaysBetween), rate = 1),
+       col = "Dark Blue",
+       xlab = "Days Beetween Shark Attacks",
+       ylab = "Exponentioal Distribution",
+       main = "")
+qqline(GSAFdata.inlyers$DaysBetween, 
+       distribution = qexp,
+       col = "Red")
+par(mfrow=c(1,1))               # Resets the screen in normal
+```
+
+The plots visually impliy that the distribution could be an exponential distribution.
+
+### 3h)
+
+```{r, fig.align="center", fig.cap="Fitting Exponential Model", echo=FALSE }
+par(mfrow=c(2,2))               # Divides the screen into four sections
+# Builds a model according to the exponential distribution
+model.fit.exp <- fitdist(GSAFdata.inlyers$DaysBetween, "exp")
+cdfcomp(model.fit.exp)        # Compares the model's cfd with theoritical cfd
+denscomp(model.fit.exp)       # Compares the model's density with theoritical density
+qqcomp(model.fit.exp)         # Compares the model's quantiles with theoritical quantiles
+ppcomp(model.fit.exp)         # Compares the model's probabilities with theoritical probabilities
+temp <- gofstat(model.fit.exp)
+par(mfrow=c(1,1))               # Resets the screen in normal
+```
+
+The plots show that the data has a good fit to the exponential distribution and also the p-value of tests are greater than 5%. Thus $H_0$ is not rejected and days between attack follows the exponential distribution.
+
+### 3i)
+
+The problem states that if the shark attcks occur in **Poisson process**, the time between attacks follows the **exponential distribution**. As we showed in the previous section, the time between attacks is a exponential process, thus ***"the shark attack is a Poisson Pocess"***.
+
+---------------------------------------------------------------------------------------
+
+## Problem 4
+
+### 4a)
+The investigation on data set reveals that the variable ***tariff*** has the most missing values and ***fiveop*** and ***intresmi*** are in the next places. More details are available in R code.
+```{r, include=FALSE}
+data("freetrade")   # Load the data
+missing.rate <- function(x) round(mean(is.na(x))*100, 2) # Calculates missing percentage
+temp <- apply(freetrade, 2, missing.rate) # Missing percentages for all variables
+temp <- md.pattern(freetrade[,c("polity", "signed", "intresmi", "fiveop", "tariff")])
+```
+
+### 4b)
+
+```{r, include=FALSE}
+freetrade.country.tariff <- freetrade[,c("country","tariff")]
+tarrif.NA.count <- ddply(freetrade.country.tariff,c("country"),
+                         summarise, cNA=sum(is.na(tariff)))
+tarrif.NA.count.table <- table(tarrif.NA.count$cNA,tarrif.NA.count$country) 
+temp <- chisq.test(tarrif.NA.count.table) 
+tarrif.NA.count.NoNepal <- tarrif.NA.count[(tarrif.NA.count$country!="Nepal"),] 
+tarrif.NA.count.NoNepal.table <- table(tarrif.NA.count.NoNepal$cNA,
+                                       tarrif.NA.count.NoNepal$country) 
+temp <- chisq.test(tarrif.NA.count.NoNepal.table) 
+
+tarrif.NA.count.NoPhilipins <- tarrif.NA.count[(tarrif.NA.count$country!="Philippines"),] 
+tarrif.NA.count.NoPhilipins.table <- table(tarrif.NA.count.NoPhilipins$cNA,
+                                           tarrif.NA.count.NoPhilipins$country) 
+temp <- chisq.test(tarrif.NA.count.NoPhilipins.table) 
+```
+
+Chi square tests have been performed on the original data set, data without Nepal, and data without Philipines. The p-values were almost same for all the tests, Therefore tehre is no significant change in different cases. It seems that the missing value for **tariff** variable is not related to **Country** variable. Details are available in R code.
+
+---------------------------------------------------------------------------------------
+
+## Problem 5
+
+### 5a)
+
+```{r}
+data("mtcars")
+corMat <- cor(mtcars)
+
+mtcars.eigen <- eigen(corMat)
+
+mtcars.PC <- prcomp(mtcars, scale. = TRUE)   # Compute the principal component of mtcars
+
+round(sum(abs(mtcars.PC$rotation) - abs(mtcars.eigen$vectors)), 2) # Compare with difference
+
+round(mtcars.PC$rotation[,1] %*% mtcars.PC$rotation[,2],2)   # Checks orthogonality
+```
+
+The results show that the rotation matrix of principal component is the eigen vecotor of the same data. In addition, the PC1 and PC2 are orthogonal.
+
+### 5b)
+
+```{r, results='asis'}
+data("heptathlon")
+par(mfrow=c(2,4))               # Divides the screen into four sections
+temp <- apply(heptathlon[,1:8], 2, hist)# Draws histograms
+par(mfrow=c(1,1))               # Resets the screen in normal
+```
+Since the number of records in this example is not much, it is difficult to say if the distribution is normal. But I guess the distribution is normal. 
+
+
+```{r, include=FALSE}
+temp <- apply(heptathlon[,1:8], 2, grubbs.test) 
+temp <- apply(heptathlon[,1:8], 2, outlier)
+heptathlon <- heptathlon[heptathlon$score != outlier(heptathlon$score),]
+```
+
+Applying the Grubb's test and looking into the results shows that **Launa (PNG)** definitly is the outliener. She is an ouliner at "*hurdles*", "*highjump*", "*run800m*", and "*score*". We can omit her record to have a cleaner data set. Details are avialable in R code.
+```{r}
+heptathlon$hurdles <- max(heptathlon$hurdles) - heptathlon$hurdles
+heptathlon$run200m <- max(heptathlon$run200m) - heptathlon$run200m
+heptathlon$run800m <- max(heptathlon$run800m) - heptathlon$run800m
+```
+
+```{r, fig.height=3, fig.width=4, fig.align="center", fig.cap="Biplot of Principle Component Analysis", echo=FALSE}
+
+Hpca <- prcomp(heptathlon[,1:7], scale. = TRUE); 
+ggbiplot(Hpca, circle=TRUE)
+
+plot(Hpca$x[,1],heptathlon$score,
+     xlab = "PC1 Projection",
+     ylab = "Score",
+     col = "Red")
+```
+The Biplot here shows that *Javelin* is higly related to **PC1** in negative way. Other variables shows more relation to **PC2**; *runnings* and *hurdles* are in positive direction where *jumpings* and *shot* are in negative direction.
+
+The next figure shows that PC1 is a very desriptive variable and we can condense all the original attributes into one variable and still keep the variance for analyzing purposes. The PC1 variable which is the reduced dimension of all the original variables, has a negative relationship with the score variable. In the other words, we can reduce 7 dimensions into a single dimension without loosing much information. Since the original variables are correlated, as could be expected, it is possible to condense all of them into a simple variable.
+
+## 5c)
+The main goal in using ***Principal Component Analysis*** is to reduce the dimension of the problem. In the image processing problems like this problem, each pixel of picture is considered as a feature. Therefore we will have a very huge amount of features. In this case which contains very small images, we have 256 variables. If we decide to keep 90% of the variance which is an acceptable number, the following results would be achievable. The worst case has 48 dimensions that comparing to the original dimensions 256 is a very good improvement.
+
+```{r, eval=FALSE}
+hw.0 <-read.csv("train.0")
+hw.0.pc <-prcomp(hw.0)
+hw.0.pc.summary <- summary(hw.0.pc)
+i = 1
+while (hw.0.pc.summary$importance[3,i] < 0.90) {
+  i = i + 1
+}
+hw.0.pc.cut = i
+screeplot(hw.0.pc, 
+          xlab = "Principal Components",
+          main = paste ("Screen plot - digit '0'- ", 
+                        hw.0.pc.cut,"PCs Cover 90% of Cumullative Variation"),
+          npcs = hw.0.pc.cut)
+
+```
+
+```{r, fig.height=2, fig.width=4, fig.height=3, fig.width=6, fig.align="center", fig.cap="Dimension Reduction Using PCA Technique", echo=FALSE}
+hw.0 <-read.csv("train.0")
+hw.0.pc <-prcomp(hw.0)
+hw.0.pc.summary <- summary(hw.0.pc)
+i = 1
+while (hw.0.pc.summary$importance[3,i] < 0.90) {
+  i = i + 1
+}
+hw.0.pc.cut = i
+screeplot(hw.0.pc, 
+          xlab = "Principal Components",
+          main = paste ("Screen plot - digit '0'- ", 
+                        hw.0.pc.cut,"PCs Cover 90% of Cumullative Variation"),
+          npcs = hw.0.pc.cut)
+
+
+hw.5 <-read.csv("train.5")
+hw.5.pc <-prcomp(hw.5)
+hw.5.pc.summary <- summary(hw.5.pc)
+i = 1
+while (hw.5.pc.summary$importance[3,i] < 0.90) {
+  i = i + 1
+}
+hw.5.pc.cut = i
+screeplot(hw.0.pc, 
+          xlab = "Principal Components",
+          main = paste ("Screen plot - digit '5'- ", 
+                        hw.5.pc.cut,"PCs Cover 90% of Cumullative Variation"),
+          npcs = hw.5.pc.cut)
+
+hw.7 <-read.csv("train.7")
+hw.7.pc <-prcomp(hw.7)
+hw.7.pc.summary <- summary(hw.7.pc)
+i = 1
+while (hw.7.pc.summary$importance[3,i] < 0.90) {
+  i = i + 1
+}
+hw.7.pc.cut = i
+screeplot(hw.0.pc, 
+          xlab = "Principal Components",
+          main = paste ("Screen plot - digit '7'- ", 
+                        hw.7.pc.cut,"PCs Cover 90% of Cumullative Variation"),
+          npcs = hw.7.pc.cut)
+```
+
+
+---------------------------------------------------------------------------------------
+
+## Problem 6
+
+The data contains information about shape, texture, and margin of leaves. The given data are in form of csv files which describe the image of the leaf. Data is available on ***[https://www.kaggle.com/c/leaf-classification](https://www.kaggle.com/c/leaf-classification)***. No data is missing. Some data manupolation is available in R code. 
+
+

@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AAF3222B-7453-79DF-658C-7F9C58667F66" schemaObject="8D849F0E-96F6-623C-A7A4-4F6C8DD1D73D" name="DIRECTOR">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>DIRECTOR</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<importedID>31A3BB11-D990-B592-20CB-C9A6F955D33A</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DID" id="42CBC88F-965D-D46D-5A4C-AF273FACFD83">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>DIRECTOR</sourceObjSchema>
+<sourceObjName>DID</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<importedID>24A4B2D5-91B7-F1FA-7294-CF51FF24327C</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DNAME" id="28B99813-1FD8-3B42-B240-1FD5B03251E4">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>DIRECTOR</sourceObjSchema>
+<sourceObjName>DNAME</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<importedID>BC602894-6786-ED89-7611-0350936395FA</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EARNINGS" id="4A6414F8-C0B5-2BB9-A6F2-0BAE1DFA68FF">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>DIRECTOR</sourceObjSchema>
+<sourceObjName>EARNINGS</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<importedID>8BDE25C6-B17E-1263-B2AF-B6A3603E0CC5</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>63</dataTypePrecision>
+<ownDataTypeParameters>,63,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="776FD0A3-8CF6-10CD-F72D-4D80AA24E61F" name="DIRECTOR_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>DIRECTOR_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<importedID>68DB8FE2-8ECC-1EAD-9065-385F42B4B60A</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="42CBC88F-965D-D46D-5A4C-AF273FACFD83"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5804D9E9-FC10-F974-A43D-CEBF7086870E" schemaObject="8D849F0E-96F6-623C-A7A4-4F6C8DD1D73D" name="DIRECTOR_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>DIRECTOR_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:50 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<importedID>4D3CCF79-5F51-AA4D-D237-36162B11A205</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="42CBC88F-965D-D46D-5A4C-AF273FACFD83"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

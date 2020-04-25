@@ -1,0 +1,78 @@
+#!/bin/bash
+#
+# example_cuda.sh
+#
+# This example batch script is intended for running non-parallel
+# (serial) programs only.
+#
+# last modified by OSCER 2017-05-05 12:11
+#
+# Everywhere throughout this batch script file:
+# * CHANGE yourusername to your username;
+# * CHANGE youremailaddress@yourinstitution.edu to your e-mail address;
+# * CHANGE directory_to_run_in to the directory you want to run in;
+# * CHANGE jobname to your preferred name for this batch job.
+#
+# BEGIN BATCH SCRIPT
+#
+# The partition can be changed between gpu and debug_gpu.
+#SBATCH --partition=gpu
+#
+# The SBATCH directive below says to use 1 CPU core of one CPU chip
+# on one compute node, meaning that this batch jobs is non-parallel
+# (serial). DON'T CHANGE THIS.
+#
+#SBATCH --ntasks=1
+#
+# The SBATCH directive below indicates to the scheduler the amount of
+# memory your job will use in megabytes.  This is critical information
+# for scheduling of nonexclusive jobs, since it prevents the scheduler
+# from assigning more jobs to a given compute node than that node
+# has memory for.
+#
+#SBATCH --mem=1024
+#
+# STDOUT is the output that normally would go to the terminal screen.
+# STDERR is like STDOUT, except that it contains error messages instead
+# of regular output.
+#
+#SBATCH --output=/home/yourusername/directory_to_run_in/jobname_%J_stdout.txt
+#SBATCH --error=/home/yourusername/directory_to_run_in/jobname_%J_stderr.txt
+#
+# The SBATCH directive below says to run for up to 12 hours (and zero
+# minutes and zero seconds) of "wall clock" time (time experienced in
+# real life).
+# Currently, the maximum allowable wall clock time per batch job is
+# 48:00 hours.
+# 
+# The debug_gpu partition has a maximum time limit of 00:30:00.  If you use
+# this partition be sure your --time directive is 30 minutes or less.
+#
+#SBATCH --time=12:00:00
+#
+# The SBATCH directive below says the name of the batch job, as it
+# will appear in the batch partition when you do an squeue command.
+#
+#SBATCH --job-name=jobname
+#
+# The SBATCH directive below says the e-mail address to send
+# notifications to, which should be changed to your e-mail address.
+#
+#SBATCH --mail-user=youremailaddress@yourinstitution.edu
+#
+# The SBATCH directive below says to e-mail a notification when the
+# batch job either completes or fails.
+#
+#SBATCH --mail-type=ALL
+#
+# Change to the directory that you want to run in.  This is more effective
+# than using a cd command in the execution part of your script.
+#
+#SBATCH --workdir=/home/yourusername/directory_to_run_in
+#
+
+#################################################
+
+module load CUDA/8.0.44-GCC-4.9.3-2.25
+
+/home/yourusername/executable_directory/executable_filename

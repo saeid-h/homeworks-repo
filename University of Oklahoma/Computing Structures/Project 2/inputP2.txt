@@ -1,0 +1,22 @@
+4 16
+Afghanistan High Dense 50% 10
+Afghanistan High Sparse 50% 30
+Afghanistan Low Dense 100% 10
+Afghanistan Low Dense 50% 20
+Algeria High Dense 50% 20
+Algeria High Dense 100% 10
+Algeria Low Dense 50% 20
+Algeria Low Dense 100% 20
+Belarus High Average 50% 10
+Belarus High Average 100% 10
+Cameroon High Dense 50% 30
+Cameroon Medium Average 100% 40
+Chile Low Sparse 100% 50
+Chile Medium Sparse 50% 30
+Chile Medium Dense 50% 40
+Chile Medium Dense 100% 30
+4
+F * * * *
+F Afghanistan * * *
+F Cameroon High * *
+F Chile * Sparse *

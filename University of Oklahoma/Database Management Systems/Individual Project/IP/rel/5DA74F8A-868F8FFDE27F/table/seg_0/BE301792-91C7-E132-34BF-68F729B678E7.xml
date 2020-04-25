@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BE301792-91C7-E132-34BF-68F729B678E7" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="REPAIR">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>REPAIR</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:42 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PID" id="7A91A95D-D088-7722-990F-3E5E0814BFD7">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>REPAIR</sourceObjSchema>
+<sourceObjName>PID</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="07AFC68A-81DB-C9AE-3B06-7182884033C2" referredColumn="DA43959A-FDD1-392C-4EF6-1DCB06AFF5F7"/>
+</associations>
+</Column>
+<Column name="E_NAME" id="61BCBACC-BDD2-628B-45AF-0F9F42AA056D">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>REPAIR</sourceObjSchema>
+<sourceObjName>E_NAME</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6FD2E4E4-1D74-93DB-5434-F388BFBC6EB9" referredColumn="99A771FC-3BBC-F1C5-11DC-D5BFDF7FB425"/>
+</associations>
+</Column>
+<Column name="R_DATE" id="3AE7966C-52DD-8577-01A2-6D39BE157EA1">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>REPAIR</sourceObjSchema>
+<sourceObjName>R_DATE</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FF23CAC9-4436-CDDC-9367-A08762539595" name="REPAIR_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>REPAIR_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7A91A95D-D088-7722-990F-3E5E0814BFD7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5D578DA8-8D47-0339-7E73-00E56AA484DE" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="REPAIR_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>REPAIR_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7A91A95D-D088-7722-990F-3E5E0814BFD7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BA6AD0E4-1468-53B7-300A-CF06172FEB60" name="REPAIR_FK1">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7A91A95D-D088-7722-990F-3E5E0814BFD7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1B32597C-97CD-4CF5-194A-98E0D2FC8981" name="REPAIR_FK2">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61BCBACC-BDD2-628B-45AF-0F9F42AA056D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

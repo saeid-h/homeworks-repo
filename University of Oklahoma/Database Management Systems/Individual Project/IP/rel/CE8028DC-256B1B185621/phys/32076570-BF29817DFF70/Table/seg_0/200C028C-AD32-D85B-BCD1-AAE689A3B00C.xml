@@ -1,0 +1,44 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="REF_DEGREE" directorySegmentName="seg_0" id="200C028C-AD32-D85B-BCD1-AAE689A3B00C">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-15 14:39:31 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<schemaObject>0503BCCF-421E-5CB6-92DC-473ADDD28093</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>668BC2C5-C799-203F-5DD5-A585D19286FC</segment>
+<tableSpace>A116B93A-9DA5-3048-B7B8-EE8266D8640A</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="DEGREE" id="7C63660D-EA31-A196-9715-559D7A81042B">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-15 14:39:31 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="REF_DEGREE_PK" id="BA5333D3-99CA-2A4F-192A-49ADC5594C27">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-15 14:39:31 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<schemaObject>0503BCCF-421E-5CB6-92DC-473ADDD28093</schemaObject>
+<segment>8F1FF7BB-B3DC-61A8-A9FE-08A5A543438F</segment>
+<tableSpace>A116B93A-9DA5-3048-B7B8-EE8266D8640A</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="REF_DEGREE_PK" id="3E7C8EFF-528A-34E8-C564-49666DC3D58B">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-15 14:39:31 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<segment>8F1FF7BB-B3DC-61A8-A9FE-08A5A543438F</segment>
+<tableSpace>A116B93A-9DA5-3048-B7B8-EE8266D8640A</tableSpace>
+<existingIndex>BA5333D3-99CA-2A4F-192A-49ADC5594C27</existingIndex>
+<indexSegment>8F1FF7BB-B3DC-61A8-A9FE-08A5A543438F</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

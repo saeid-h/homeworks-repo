@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="DSA-4513" id="584C4220-7886-7CCE-44E8-70A5873E5EB8" mainViewID="FC4A2D54-0590-7536-C25F-592B53C2DDAB">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 01:03:55 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>3FD120B5-9F4E-6278-D5E2-746D192C8319</selectedRDBMSSite>
+<importConnectionStamps>
+<importConnectionStamp class="oracle.dbtools.crest.imports.DBConnectionStamp">
+<connName>DSA-4513</connName>
+<connUrl>jdbc:oracle:thin:@oracle.cs.ou.edu:1521/pdborcl.cs.ou.edu</connUrl>
+<connUser>hoss5825</connUser>
+<connType>1</connType>
+</importConnectionStamp>
+</importConnectionStamps>
+</relationalModel>

@@ -1,0 +1,88 @@
+MNAME                               GENRE              MINUTES                            RELEASE_YEAR        DID
+----------------------------------- --------------- ---------- --------------------------------------- ----------
+Jurassic Park                       Action                 125                                    1984          2
+Shawshank Redemption                Drama                  105                                    2001          2
+Fight Club                          Drama                  144                                    2015          2
+The Departed                        Drama                  130                                    1969          3
+Back to the Future                  Comedy                  89                                    2008          3
+The Lion King                       Animation               97                                    1990          1
+Alien                               Sci-Fi                 115                                    2006          3
+Toy Story                           Animation              104                                    1978          1
+Scarface                            Drama                  124                                    2003          1
+Up                                  Animation              111                                    1999          4
+
+ 10 rows selected 
+
+PL/SQL procedure successfully completed.
+
+MNAME                               GENRE              MINUTES                            RELEASE_YEAR        DID
+----------------------------------- --------------- ---------- --------------------------------------- ----------
+Jurassic Park                       Action                 125                                    1984          2
+Shawshank Redemption                Drama                  105                                    2001          2
+Fight Club                          Drama                  144                                    2015          2
+The Departed                        Drama                  130                                    1969          3
+Back to the Future                  Comedy                  89                                    2008          3
+The Lion King                       Animation               97                                    1990          1
+Alien                               Sci-Fi                 115                                    2006          3
+Toy Story                           Animation              104                                    1978          1
+Scarface                            Drama                  124                                    2003          1
+Up                                  Animation              111                                    1999          4
+BIG MOUNTAIN                        Comedy                  89                                    1985          2
+
+MNAME                               GENRE              MINUTES                            RELEASE_YEAR        DID
+----------------------------------- --------------- ---------- --------------------------------------- ----------
+Rocky Horror Picture Show           Horror                 120                                    1992          1
+
+ 12 rows selected 
+
+
+
+PL/SQL procedure successfully completed.
+
+PL/SQL procedure successfully completed.
+
+Performer Name: Morgan
+Performer AGE: 67
+Performer YOE: 48
+Acted In:
+              The Departed
+------------------------
+Performer Name: Cruz
+Performer AGE: 28
+Performer YOE: 14
+Acted In:
+              Fight Club
+------------------------
+Performer Name: Adams
+Performer AGE: 16
+Performer YOE: 1
+Acted In:
+              Fight Club
+------------------------
+Performer Name: Perry
+Performer AGE: 32
+Performer YOE: 18
+Acted In:
+              Alien
+              Fight Club
+              Up
+------------------------
+Performer Name: Hanks
+Performer AGE: 55
+Performer YOE: 36
+Acted In:
+              Fight Club
+              Shawshank Redemption
+------------------------
+Performer Name: Hanks
+Performer AGE: 24
+Performer YOE: 15
+Acted In:
+              Shawshank Redemption
+------------------------
+Performer Name: Lewis
+Performer AGE: 32
+Performer YOE: 13
+Acted In:
+------------------------
+

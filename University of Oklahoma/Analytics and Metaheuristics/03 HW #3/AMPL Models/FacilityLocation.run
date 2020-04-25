@@ -1,0 +1,39 @@
+# Options -----------------------------------------------------------------------------
+
+#reset;
+#options solver cplex;
+#option cplex_options 'presolve=0  mipcuts=-1  splitcuts=-1 heuristicfreq=-1 mipsearch=1 timing=1 mipdisplay=5 mipinterval=1';
+
+
+# Run model ---------------------------------------------------------------------------
+
+#model FacilityLocation.mod;
+
+
+# Load data ---------------------------------------------------------------------------
+
+#data FacilityLocation.dat;
+
+
+# Solve -------------------------------------------------------------------------------
+
+solve;
+
+
+# Display Results ----------------------------------------------------------------------
+
+#display p;
+#display d;
+display x;
+display y;
+display z;
+display D;
+#display Budget_Limit;
+#display Unique_Assignment;
+#display Adjustment;
+#display Restriction_1;
+#display Restriction_2;
+#display Population_Served;
+#display Distances;
+display s;
+display sum {j in J} (c[j] * s [j] + f[j] * y[j]);

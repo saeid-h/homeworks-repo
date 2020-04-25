@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DEC7A848-F443-7DBD-70C5-6BC2BEF909F1" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="TECH_STAFF">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>TECH_STAFF</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="E_NAME" id="99A771FC-3BBC-F1C5-11DC-D5BFDF7FB425">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>TECH_STAFF</sourceObjSchema>
+<sourceObjName>E_NAME</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6425AF33-BEE0-152F-C508-8899A4873238" referredColumn="A0D38B63-122E-50DC-7683-028E6D5CC590"/>
+</associations>
+</Column>
+<Column name="EDUCATION" id="99D55720-20F9-E676-AA62-8F7B4FFCD6B7">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>TECH_STAFF</sourceObjSchema>
+<sourceObjName>EDUCATION</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="487C9A8F-1300-C4C0-0641-F89A40BFD5DE" referredColumn="FC6D9346-51C3-B988-F846-8D98C42EEE07"/>
+</associations>
+</Column>
+<Column name="POSITION" id="7D142BD4-6C54-0C6D-9310-0951AB6F0575">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>TECH_STAFF</sourceObjSchema>
+<sourceObjName>POSITION</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="28013C80-9EA2-0305-0287-3207955E9392" name="TECH_STAFF_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>TECH_STAFF_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="99A771FC-3BBC-F1C5-11DC-D5BFDF7FB425"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="267FFD82-EBA1-26B4-F73B-50417792C9F6" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="TESCH_STAFF_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>TESCH_STAFF_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="99A771FC-3BBC-F1C5-11DC-D5BFDF7FB425"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7F92EB03-8BDE-2E73-33C7-C1E739306DB8" name="TECH_STAFF_FK1">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="99A771FC-3BBC-F1C5-11DC-D5BFDF7FB425"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E7ED63C6-E73D-0A0B-5DA4-14B43F427401" name="TECH_STAFF_FK2">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="99D55720-20F9-E676-AA62-8F7B4FFCD6B7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C17ACA9A-F1F8-EE76-096B-623AD69CF889" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="P1_ACCOUNT">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>P1_ACCOUNT</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:42 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ACNT_NO" id="A68F30A9-73C9-DF0E-FE48-0A9A616BAAC4">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>P1_ACCOUNT</sourceObjSchema>
+<sourceObjName>ACNT_NO</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4C6AD502-1A2E-27A2-ECFF-F550027DF031" referredColumn="2BF1BAC9-4D0F-4B13-D9DC-DE293338A988"/>
+</associations>
+</Column>
+<Column name="PID" id="AEB5364D-3AB4-8732-2D7B-97184303950D">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>P1_ACCOUNT</sourceObjSchema>
+<sourceObjName>PID</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E0905AA4-D13C-658F-F833-03422E152911" referredColumn="AAE9B5B8-05C3-8A81-A79D-A9949FFDFD96"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A7D46BEC-088E-C104-5422-CA1D17621541" name="P1_ACCOUNT_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>P1_ACCOUNT_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A68F30A9-73C9-DF0E-FE48-0A9A616BAAC4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D0D6F9BE-649C-C465-B910-01EA91C946C1" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="P1_ACCOUNT_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>P1_ACCOUNT_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A68F30A9-73C9-DF0E-FE48-0A9A616BAAC4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0AE10C6B-818A-A969-09D6-E6DF5EB5B160" name="P1_ACCOUNT_FK1">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A68F30A9-73C9-DF0E-FE48-0A9A616BAAC4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E718E66B-028D-4E27-4F77-2DC51E1E4F63" name="P1_ACCOUNT_FK2">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AEB5364D-3AB4-8732-2D7B-97184303950D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

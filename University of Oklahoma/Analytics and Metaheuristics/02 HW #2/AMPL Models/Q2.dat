@@ -1,0 +1,29 @@
+# Shortest Path MCNFP Problem Formulation 
+# Adopted to tractor problem of assignment #2 
+# created by Charles Nicholson, ISE 5113
+# modified by Saeid Hosseinipoor for homework problem
+
+# use with "Q2.mod" model
+# note: default arc costs and lower bounds are 0
+#      	default arc upper bounds are infinity
+#      	default node requirements are 0
+
+
+set NODES :=  	0 1 2 3;
+
+set ARCS := 	(0,1) (0,2) (0,3) (1,2) (1,3) (2,3);
+
+param b:=	0  1     #for shortest path problem, start node supply = 1
+        	3 -1;    #and the destination node supply = -1
+
+# note: to make things a little more compact, you can use a "template" 
+# for setting up costs.  See Chapter 9 "Specificying Data" in the AMPL textbook 
+
+param c:=		[0, 1] 	   8
+                [0, 2] 	  18
+                [0, 3] 	  31
+                [1, 2] 	  10    
+                [1, 3] 	  21  
+                [2, 3] 	  12;
+
+

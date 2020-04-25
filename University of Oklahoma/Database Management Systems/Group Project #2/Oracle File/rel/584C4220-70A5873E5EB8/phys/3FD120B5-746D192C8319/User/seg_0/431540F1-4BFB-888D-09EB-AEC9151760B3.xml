@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="HOSS5825" directorySegmentName="seg_0" id="431540F1-4BFB-888D-09EB-AEC9151760B3">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjName>HOSS5825</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-09-30 18:18:36 UTC</createdTime>
+<ownerDesignName>Oracle File</ownerDesignName>
+<schemaObject>8D849F0E-96F6-623C-A7A4-4F6C8DD1D73D</schemaObject>
+</UserOraclev10g>

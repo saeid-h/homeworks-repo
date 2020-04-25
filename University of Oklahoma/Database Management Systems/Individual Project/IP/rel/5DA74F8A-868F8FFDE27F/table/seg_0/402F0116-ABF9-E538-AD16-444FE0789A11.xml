@@ -1,0 +1,122 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="402F0116-ABF9-E538-AD16-444FE0789A11" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="ACCIDENT_PRODUCTION">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>ACCIDENT_PRODUCTION</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:42 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ACCIDENT_ID" id="087411D2-7653-DFD3-B41B-3A2D1E6ACEEB">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>ACCIDENT_PRODUCTION</sourceObjSchema>
+<sourceObjName>ACCIDENT_ID</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="626EF586-3FF2-764E-B605-8D02952C6612" referredColumn="739242B0-6E69-BCAC-61E5-72F4E811DD18"/>
+</associations>
+</Column>
+<Column name="PID" id="040CCBDE-E5BD-4F75-C9B2-1F88C26D9274">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>ACCIDENT_PRODUCTION</sourceObjSchema>
+<sourceObjName>PID</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="13FE8602-E43A-0237-606A-F4F55FCF7F61" referredColumn="DA43959A-FDD1-392C-4EF6-1DCB06AFF5F7"/>
+</associations>
+</Column>
+<Column name="W_NAME" id="633A53AF-F323-051F-F976-6E6449E91AA9">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>ACCIDENT_PRODUCTION</sourceObjSchema>
+<sourceObjName>W_NAME</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5DE2EDF5-7D5C-0ED4-6531-991A56D23355" referredColumn="5B475AED-395A-3837-151D-F4A0DC1DD058"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7BBB5D84-3D5F-58A0-A56E-BDDFBFDC09D2" name="ACCIDENT_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>ACCIDENT_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="087411D2-7653-DFD3-B41B-3A2D1E6ACEEB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="75D7B6E4-4FD4-0FBA-ECA6-FFEF7F70AF7F" schemaObject="1EFFAE74-1950-00E2-9075-C68B87AFAFA7" name="ACCIDENT_PK">
+<sourceConnName>DSA-4513</sourceConnName>
+<sourceObjSchema>HOSS5825</sourceObjSchema>
+<sourceObjName>ACCIDENT_PK</sourceObjName>
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:43 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="087411D2-7653-DFD3-B41B-3A2D1E6ACEEB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FF9416FE-9A8D-858A-5171-6D5A86097695" name="ACCIDENT_FK1">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="087411D2-7653-DFD3-B41B-3A2D1E6ACEEB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3CA26027-DECA-F583-F78E-993F5607BB7D" name="ACCIDENT_FK2">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="040CCBDE-E5BD-4F75-C9B2-1F88C26D9274"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3A677D4F-64D7-0B2A-78A5-836B27A3E5D4" name="PRODUCTION_ACCIDENT_FK1">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:16:44 UTC</createdTime>
+<ownerDesignName>IP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="633A53AF-F323-051F-F976-6E6449E91AA9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

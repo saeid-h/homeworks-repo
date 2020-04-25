@@ -1,0 +1,273 @@
+The Nation's two crime measures
+
+U.S. Department of Justice
+May  2003, NCJ 122705
+
+The U.S. Department of Justice administers two
+statistical programs to measure the magnitude,
+nature, and impact of crime in the Nation: the
+Uniform Crime Reporting (UCR) Program and the
+National Crime Victimization Survey (NCVS).  Each
+of these programs produces valuable information
+about aspects of the Nation's crime problem. 
+Because the UCR and NCVS programs are conducted
+for different purposes, use different methods, and
+focus on somewhat different aspects of crime, the
+information they  produce together provides a more
+comprehensive panorama of the Nation's crime
+problem than either could produce alone.
+
+
+Uniform Crime Reports 
+Federal Bureau of Investigation (FBI)
+
+The FBI's UCR program, which began in 1929,
+collects information on the following crimes
+reported to law enforcement authorities: homicide,
+forcible rape, robbery, aggravated assault,
+burglary, larceny-theft, motor vehicle theft, and
+arson.  Arrests are reported for 21 additional
+crime categories.
+
+The UCR data are compiled from monthly law
+enforcement reports or individual crime incident
+records transmitted directly to the FBI or to
+centralized state agencies that then report to the
+FBI.  Each  report submitted to the UCR Program is
+examined thoroughly for reasonableness, accuracy,
+and deviations that may indicate errors. Large
+variations in crime levels may indicate modified
+records  procedures, incomplete reporting, or
+changes in a jurisdiction's boundaries.  To
+identify any unusual fluctuations in an agency's
+crime counts, monthly reports are compared with
+previous  submissions of the agency and with those
+for similar agencies.
+
+In 2003, law enforcement agencies active in the
+UCR Program  represented approximately 291 million
+U.S. inhabitants--93.0 percent of the total
+population.
+
+The UCR Program provides crime counts for the
+Nation as a whole, as well as for regions, states,
+counties, cities, and towns.  This permits studies
+among neighboring jurisdictions and among those
+with similar populations and other common
+characteristics.
+
+UCR findings for each calendar year are published
+in a preliminary release in the spring, followed
+by a detailed annual report, Crime in the United
+States, issued in the following calendar year.  In
+addition to crime counts and trends, this report
+includes data on crimes cleared, persons arrested
+(age, sex, and race), law enforcement personnel
+(including the number of sworn officers killed or 
+assaulted), and the characteristics of homicides
+(including age, sex, and race of victims and
+offenders, victim-offender relationships, weapons
+used, and circumstances surrounding the
+homicides).  Other special reports are also
+available from the UCR Program. 
+
+Following a 5-year redesign effort, the UCR
+Program is currently being converted to the more
+comprehensive and detailed National Incident-Based
+Reporting System (NIBRS).  NIBRS will provide 
+detailed information about each criminal incident
+in 22 broad  categories of offenses.
+
+
+National Crime Victimization Survey 
+Bureau of Justice Statistics (BJS)
+
+The Bureau of Justice Statistics' NCVS, which
+began in 1973, provides a detailed picture of
+crime incidents, victims, and trends. After a
+substantial period of research, in 1993 the survey
+completed an intensive methodological redesign.
+The redesign was undertaken to improve the
+questions used to uncover crime, update the survey
+methods, and broaden the scope of crimes measured.
+The redesigned survey collects detailed
+information on the frequency and  nature of the
+crimes of rape, sexual assault, personal robbery,
+aggravated and simple assault, household burglary,
+theft, and motor vehicle theft.  It does not
+measure homicide or commercial crimes (such as
+burglaries of stores).
+
+Two times a year, U.S. Census Bureau personnel 
+interview household members in a nationally 
+representative sample of approximately
+42,000 households (about 75,000 people).
+Approximately 150,000 interviews of persons
+age 12 or older are conducted annually.
+Households stay in the sample for three years.  
+New households are rotated into the sample on 
+an ongoing basis.
+
+The NCVS collects information on crimes suffered
+by individuals and households, whether or not
+those crimes were reported to law enforcement. It
+estimates the proportion of each crime type 
+reported to law enforcement, and it summarizes the
+reasons that victims give for reporting or not
+reporting.
+
+The survey provides information about victims
+(age, sex, race,ethnicity, marital status, income,
+and educational level), offenders (sex, race,
+approximate age, and victim-offender
+relationship), and the crimes (time and place of
+occurrence, use of weapons, nature of injury, and
+economic consequences). Questions also cover the
+experiences of victims with the criminal justice
+system, self-protective measures used by victims,
+and possible substance abuse by offenders.
+Supplements are added periodically to the survey
+to obtain detailed information on topics like
+school crime.
+    
+The first data from the redesigned NCVS were
+published in a BJS bulletin in June 1995.  BJS
+publication of NCVS data includes Criminal
+Victimization in the United States, an annual
+report that covers the broad range of detailed
+information collected by the NCVS.  BJS publishes
+detailed reports on topics such as crime against
+women, urban crime, and gun use in crime.  The
+NCVS  and UCR data files are archived at the
+National Archive of Criminal  Justice Data at the
+University of Michigan to enable researchers  to
+perform independent analysis.
+
+
+Comparing UCR and NCVS
+
+Because the NCVS was designed to complement the
+UCR program, the two programs share many
+similarities.  As much as their different
+collection methods permit, the two measure the
+same subset of serious crimes, defined alike. 
+Both programs cover rape, robbery, aggravated
+assault, burglary, theft, and motor vehicle theft. 
+Rape, robbery, theft, and motor vehicle theft are
+defined  virtually identically by both the UCR and
+NCVS. (While rape is  defined analogously, the UCR
+Crime Index measures the crime against women only,
+and the NCVS measures it against both sexes.)
+
+There are also significant differences between the
+two programs.  First, the two programs were
+created to serve different purposes.  The UCR
+Program's primary objective is to provide a
+reliable set of criminal justice statistics for
+law enforcement administration, operation, and
+management.  The NCVS was established to provide
+previously unavailable information about crime
+(including crime not reported to police), victims,
+and offenders. 
+
+Second, the two programs measure an overlapping
+but non-identical set of crimes.  The NCVS
+includes crimes both reported and not reported to
+law enforcement.  The NCVS excludes, but the UCR
+includes, homicide, arson, commercial crimes, and
+crimes against children under age 12.  The UCR
+captures crimes reported to law enforcement, but
+it excludes sexual assaults and simple  assaults
+from the Crime Index.
+
+Third, because of methodology, the NCVS and UCR
+definitions of some crimes differ.  For example,
+the UCR defines burglary as the unlawful entry or
+attempted entry of a structure to commit a felony
+or theft.  The NCVS, not wanting to ask victims to
+ascertain  offender motives, defines burglary as
+the entry or attempted entry of a residence by a
+person who had no right to be there.   
+
+Fourth, for property crimes (burglary, theft and
+motor vehicle theft), the two programs calculate
+crime rates using different bases.  The UCR rates
+for these crimes are per-capita (number of crimes
+per 100,000 persons), whereas the NCVS rates for
+these crimes are per-household (number of crimes
+per 1,000 households).  Because the number of
+households may not grow at the same rate each year
+as the total population, trend data for rates of
+property crimes measured by the two programs may
+not be comparable.
+
+In addition, some differences in the data from the
+two programs may result from sampling variation in
+the NCVS and from estimating for nonresponse in
+the UCR.  The NCVS estimates are derived from
+interviewing a sample and are therefore subject to
+a margin of error.  Rigorous statistical methods
+are used to calculate confidence intervals around
+all survey estimates.  Trend data in NCVS reports
+are described as genuine only if there is at least
+a 90% certainty that the measured changes are not
+the result of sampling variation.  The UCR data
+are based on the actual counts of  offenses
+reported by law enforcement jurisdictions.  In
+some  circumstances, UCR data are estimated for
+nonparticipating  jurisdictions or those reporting
+partial data.
+
+Each program has unique strengths. The UCR
+provides a measure of the number of crimes
+reported to law enforcement agencies throughout
+the country.  The UCR's Supplemental Homicide
+Reports provide the most reliable, timely data on
+the extent and  nature of homicides in the Nation. 
+The NCVS is the primary source of information on
+the characteristics of criminal victimization and 
+on the number and types of crimes not reported to
+law enforcement authorities.
+
+By understanding the strengths and limitations of
+each program,  it is possible to use the UCR and
+NCVS to achieve a greater  understanding of crime
+trends and the nature of crime in the United
+States.  For example, changes in police
+procedures, shifting  attitudes towards crime and
+police, and other societal changes  can affect the
+extent to which people report and law enforcement 
+agencies record crime.  NCVS and UCR data can be
+used in  concert to explore why trends in reported
+and police-recorded  crime may differ.  
+
+Apparent discrepancies between statistics from the
+two programs can usually be accounted for by their
+definitional and procedural differences or
+resolved by comparing NCVS sampling variations
+(confidence intervals) of those crimes said to
+have been reported to police with UCR statistics.  
+
+For most types of crimes measured by both the UCR
+and NCVS, analysts familiar with the programs can
+exclude from analysis those aspects of crime not
+common to both. Resulting long-term trend-lines
+can be brought into close concordance. The impact
+of such adjustments is most striking for robbery,
+burglary, and motor  vehicle theft, whose
+definitions most closely coincide.
+
+With robbery, annual victimization rates based
+only on NCVS  robberies reported to the police are
+possible. It is also possible to remove from
+analysis UCR robberies of commercial
+establishments such as gas stations, convenience
+stores, and banks.  When the resulting NCVS police
+reported robbery rates are compared to UCR
+non-commercial robbery rates, the results reveal
+closely  corresponding long-term trends. 
+
+(End of file)
+
+revised 5/21/03 mz
+ 

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/Google Drive/Courses/02 OU/14 Database Management Systems/03 Assignments/23 Group Project #3/ojdbc7.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

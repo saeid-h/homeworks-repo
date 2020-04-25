@@ -1,0 +1,10 @@
+## w method of sampling
+rmyexp=function(n){
+w=runif(n,0,1)
+y=-2*log(1-w)
+h=hist(y,plot=FALSE)
+hist(y,freq=FALSE,main="Uniform W", col=rainbow(length(h$mids)))
+curve( exp(-x/2)/2,add=TRUE,col="Blue",lwd=2)
+}
+
+rmyexp(1000)

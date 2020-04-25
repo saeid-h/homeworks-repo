@@ -1,0 +1,245 @@
+
+Please select one of the following options(1-4):
+1. Insert a new record with ID, name, and age of a performer.
+2. Insert a new record with ID, name, age of a performer and Director's ID.
+3. Display the complete information of all performers.
+4. Quit (exit program)
+Enter your option (1-4): 3
+
+
+PID	PNAME	EXPERIENCE	AGE
+----------------------------------------
+1	Morgan		48		67
+2	Cruz		14		28
+3	Adams		1		16
+4	Perry		18		32
+5	Hanks		36		55
+6	Hanks		15		24
+7	Lewis		13		32
+----------------------------------------
+
+
+Please select one of the following options(1-4):
+1. Insert a new record with ID, name, and age of a performer.
+2. Insert a new record with ID, name, age of a performer and Director's ID.
+3. Display the complete information of all performers.
+4. Quit (exit program)
+Enter your option (1-4): 1
+
+Enter the performer's ID: 8
+Enter the performer's name: Roca
+Enter the performer's age: 16
+The performer record added to the database.
+
+Please select one of the following options(1-4):
+1. Insert a new record with ID, name, and age of a performer.
+2. Insert a new record with ID, name, age of a performer and Director's ID.
+3. Display the complete information of all performers.
+4. Quit (exit program)
+Enter your option (1-4): 3
+
+
+PID	PNAME	EXPERIENCE	AGE
+----------------------------------------
+1	Morgan		48		67
+2	Cruz		14		28
+3	Adams		1		16
+4	Perry		18		32
+5	Hanks		36		55
+6	Hanks		15		24
+7	Lewis		13		32
+8	Roca		8		16
+----------------------------------------
+
+
+Please select one of the following options(1-4):
+1. Insert a new record with ID, name, and age of a performer.
+2. Insert a new record with ID, name, age of a performer and Director's ID.
+3. Display the complete information of all performers.
+4. Quit (exit program)
+Enter your option (1-4): 1
+
+Enter the performer's ID: 9
+Enter the performer's name: Kramer
+Enter the performer's age: 50
+The performer record added to the database.
+
+Please select one of the following options(1-4):
+1. Insert a new record with ID, name, and age of a performer.
+2. Insert a new record with ID, name, age of a performer and Director's ID.
+3. Display the complete information of all performers.
+4. Quit (exit program)
+Enter your option (1-4): 3
+
+
+PID	PNAME	EXPERIENCE	AGE
+----------------------------------------
+1	Morgan		48		67
+2	Cruz		14		28
+3	Adams		1		16
+4	Perry		18		32
+5	Hanks		36		55
+6	Hanks		15		24
+7	Lewis		13		32
+8	Roca		8		16
+9	Kramer		36		50
+----------------------------------------
+
+
+Please select one of the following options(1-4):
+1. Insert a new record with ID, name, and age of a performer.
+2. Insert a new record with ID, name, age of a performer and Director's ID.
+3. Display the complete information of all performers.
+4. Quit (exit program)
+Enter your option (1-4): 1
+
+Enter the performer's ID: 10
+Enter the performer's name: Barbudo
+Enter the performer's age: 70
+The performer record added to the database.
+
+Please select one of the following options(1-4):
+1. Insert a new record with ID, name, and age of a performer.
+2. Insert a new record with ID, name, age of a performer and Director's ID.
+3. Display the complete information of all performers.
+4. Quit (exit program)
+Enter your option (1-4): 3
+
+
+PID	PNAME	EXPERIENCE	AGE
+----------------------------------------
+10	Barbudo		48		70
+1	Morgan		48		67
+2	Cruz		14		28
+3	Adams		1		16
+4	Perry		18		32
+5	Hanks		36		55
+6	Hanks		15		24
+7	Lewis		13		32
+8	Roca		8		16
+9	Kramer		36		50
+----------------------------------------
+
+
+Please select one of the following options(1-4):
+1. Insert a new record with ID, name, and age of a performer.
+2. Insert a new record with ID, name, age of a performer and Director's ID.
+3. Display the complete information of all performers.
+4. Quit (exit program)
+Enter your option (1-4): 2
+
+Enter the performer's ID: 11
+Enter the performer's name: Rocky
+Enter the performer's age: 15
+Enter the director's ID: 2
+The performer record added to the database.
+
+Please select one of the following options(1-4):
+1. Insert a new record with ID, name, and age of a performer.
+2. Insert a new record with ID, name, age of a performer and Director's ID.
+3. Display the complete information of all performers.
+4. Quit (exit program)
+Enter your option (1-4): 3
+
+
+PID	PNAME	EXPERIENCE	AGE
+----------------------------------------
+10	Barbudo		48		70
+11	Rocky		15		15
+1	Morgan		48		67
+2	Cruz		14		28
+3	Adams		1		16
+4	Perry		18		32
+5	Hanks		36		55
+6	Hanks		15		24
+7	Lewis		13		32
+8	Roca		8		16
+9	Kramer		36		50
+----------------------------------------
+
+
+Please select one of the following options(1-4):
+1. Insert a new record with ID, name, and age of a performer.
+2. Insert a new record with ID, name, age of a performer and Director's ID.
+3. Display the complete information of all performers.
+4. Quit (exit program)
+Enter your option (1-4): 2
+
+Enter the performer's ID: 12
+Enter the performer's name: Goh
+Enter the performer's age: 40
+Enter the director's ID: 3
+The performer record added to the database.
+
+Please select one of the following options(1-4):
+1. Insert a new record with ID, name, and age of a performer.
+2. Insert a new record with ID, name, age of a performer and Director's ID.
+3. Display the complete information of all performers.
+4. Quit (exit program)
+Enter your option (1-4): 3
+
+
+PID	PNAME	EXPERIENCE	AGE
+----------------------------------------
+10	Barbudo		48		70
+11	Rocky		15		15
+1	Morgan		48		67
+2	Cruz		14		28
+3	Adams		1		16
+4	Perry		18		32
+5	Hanks		36		55
+6	Hanks		15		24
+7	Lewis		13		32
+8	Roca		8		16
+12	Goh		33		40
+9	Kramer		36		50
+----------------------------------------
+
+
+Please select one of the following options(1-4):
+1. Insert a new record with ID, name, and age of a performer.
+2. Insert a new record with ID, name, age of a performer and Director's ID.
+3. Display the complete information of all performers.
+4. Quit (exit program)
+Enter your option (1-4): 2
+
+Enter the performer's ID: 13
+Enter the performer's name: Winston
+Enter the performer's age: 69
+Enter the director's ID: 4
+The performer record added to the database.
+
+Please select one of the following options(1-4):
+1. Insert a new record with ID, name, and age of a performer.
+2. Insert a new record with ID, name, age of a performer and Director's ID.
+3. Display the complete information of all performers.
+4. Quit (exit program)
+Enter your option (1-4): 3
+
+
+PID	PNAME	EXPERIENCE	AGE
+----------------------------------------
+10	Barbudo		48		70
+11	Rocky		15		15
+1	Morgan		48		67
+2	Cruz		14		28
+3	Adams		1		16
+4	Perry		18		32
+5	Hanks		36		55
+6	Hanks		15		24
+7	Lewis		13		32
+8	Roca		8		16
+12	Goh		33		40
+9	Kramer		36		50
+13	Winston		18		69
+----------------------------------------
+
+
+Please select one of the following options(1-4):
+1. Insert a new record with ID, name, and age of a performer.
+2. Insert a new record with ID, name, age of a performer and Director's ID.
+3. Display the complete information of all performers.
+4. Quit (exit program)
+Enter your option (1-4): 4
+
+Program is terminated due to your command. Thank you for using the application.

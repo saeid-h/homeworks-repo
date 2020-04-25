@@ -1,0 +1,47 @@
+data;
+set I := 1 2 3; #each tomato based product (Whole, juice and paste)
+
+#Demand for each product in case
+param:  D :=
+     1  800000
+     2  50000
+     3  80000;
+
+#Product usage in pound per case
+param:  U :=
+     1  18
+     2  20
+     3  25;
+
+#Selling price in dollar per case
+param:  S :=
+     1  4
+     2  4.5
+     3  3.8;
+
+#Variable cost excluding tomato cost in dollar per case
+param:  V :=
+     1  2.52
+     2  3.18
+     3  1.95;
+
+#Total available tomato of grade A
+param TA := 600000;
+
+#Total available tomato of grade B
+param TB := 2400000;
+
+#Average point quality of grade A in point per pound
+param PA := 9;
+
+#Average point quality of grade B in point per pound
+param PB := 5;
+
+#cost per pound of grade “A” tomatoes
+param CA := 0.0932;
+
+#cost per pound of grade “B” tomatoes
+param CB := 0.0518;
+
+#average cost per pound of tomatoes
+param mu := 0.06;

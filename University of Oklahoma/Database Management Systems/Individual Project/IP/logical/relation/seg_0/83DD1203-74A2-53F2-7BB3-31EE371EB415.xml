@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="TECH_STAFF_FK1" directorySegmentName="seg_0" id="83DD1203-74A2-53F2-7BB3-31EE371EB415">
+<createdBy>saeidhosseinipoor</createdBy>
+<createdTime>2016-11-21 15:08:25 UTC</createdTime>
+<generatorID>F5AEBC7F-65CD-5DA3-CCBC-039E8120DC4D</generatorID>
+<ownerDesignName>IP</ownerDesignName>
+<engineerTo>
+<item key="5DA74F8A-FB5C-9054-71FD-868F8FFDE27F" value="true"/>
+<item key="CE8028DC-2192-B39F-447A-256B1B185621" value="true"/>
+</engineerTo>
+<sourcePk>CD4978CC-B3A0-4873-E4DA-31C71D317E2E</sourcePk>
+<dominantRole>6E98321D-F48A-ED0B-2047-F84A0459171E</dominantRole>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>6E98321D-F48A-ED0B-2047-F84A0459171E</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>3FF3B937-916C-F26F-36E5-4D9D635101F7</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
