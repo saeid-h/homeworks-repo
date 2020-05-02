@@ -1,0 +1,345 @@
+I did it.	Mı o ke.
+Who is it?	O kamo?
+Don't yell.	Me qirı.
+I love you.	Ez tora heskena.
+Keep still.	Me leqı!
+Tom saw it.	Tom ey di.
+We'll work.	Ma dê bê gırveyê.
+Come get it.	Bé ey bigi.
+I forgot it.	Mı ey xu viri kerd.
+I know this.	Ez ney zana.
+I'm not fat.	Ez qelav niya.
+Tom arrived.	Tom resa.
+Tom's right.	Tom raşt vano.
+We stole it.	Ma o tırıt.
+We're going.	Ma yê şıné.
+Let him talk.	Vera wa qısey bê kero.
+Tom was full.	Tom mırdbi.
+Tom's asleep.	Tomo rakewno.
+We'll go out.	Ma yê şırê teber.
+We're buying.	Mayé erinené.
+Do I know Tom?	Ez Tomi sınasnena?
+I was at home.	Ez keyed bi ya.
+I'm here, too.	Edzi tiyada.
+Is Tom hungry?	Tom veyşano?
+No one's here.	Tiyad kes çınyo.
+Tom's married.	Tom zewciyaye yo.
+Tom's not fat.	Tom qelaw niyo.
+We can end it.	Ma şenê bê qedinê.
+We missed you.	Ma bériya to kerd.
+We never talk.	Ma qe pêra qısey nê kenê.
+We'll ask Tom.	Ma dê Tom ra pers kerê?
+We'll be late.	Madê berey bımanê.
+We'll find it.	Madê ey bı vinê.
+Who came here?	Kam ame tiya?
+Did I hurt you?	Mı to tewna?
+Did you see it?	To o di?
+I am too short.	Ez bol kılma.
+I can hear Tom.	Eza Tom aşnewna.
+I didn't sleep.	Ez né rakewta.
+I have no kids.	Qeçémı çınyé.
+I like to swim.	Ez asnaw kerdış ra hes kena.
+I've done this.	Mı néy ke.
+Is that enough?	No beso?
+It wasn't good.	Rınd né bi.
+It's expensive.	O vayo.
+Let's end this.	Bé ma ney bé qediné.
+No one laughed.	Kes nê huwa.
+Stay and watch.	Vınd u temaşeké.
+That's not Tom.	O Tom niyo.
+Tom smelled it.	Tomi ey boy kerd.
+Tom was hungry.	Tom veyşan bi.
+Tom went first.	Sıfte Tom şi.
+We can do this.	Ma şené ney bıkeré.
+We'll catch up.	Madê bıresê cı.
+We'll find one.	Madê jew bı vinê.
+We're finished.	Ma qedina.
+You look tired.	Tı edizyaye asenê.
+You tricked me.	To mı xapeyna.
+Ask again later.	Dıma fına perskı.
+Do I look tired?	Ez a'dizyaye asena?
+Don't swim here.	Tiyad asnaw mekerê.
+Go to sleep now.	Şo nıka rakew.
+I am not hungry.	Ez veyşan niya.
+I can't see you.	Eza to nê şena bê vina.
+I caught a fish!	Mı mase yê tepışt!
+I like children.	Ez qeçkara heskena.
+I will stop you.	Edo to vındarna.
+I'm only joking.	Eza kuşat kena.
+It is just noon.	Nıka dihira.
+It's very cheap.	O ercano.
+Mary is my wife.	Mary ciniya ména.
+Mom, I'm hungry.	Ma mı eza veyşan.
+The day was hot.	A roj germ bi.
+We all know you.	Ma pêro tı zanê.
+We aren't alone.	Ma tenya niyê.
+We'll be killed.	Madê bêrê kıştış.
+We'll catch Tom.	Madé Tomi tepşé.
+We'll come back.	Madê peyd bêrê.
+We'll leave now.	Nıka ma yê tiyara abıryê.
+We're going out.	Ma yê şınê teber.
+You're a beauty.	Tı xaseka.
+Do you like fish?	Tı masera hes kenê?
+Has Tom returned?	Tom agerya?
+I gave Tom a hug.	Ez pêşyaya Tomi.
+It will grow old.	O do k'han bo.
+No one asked you.	Kesi to pers nékerd.
+Nobody said that.	Kesi ney né va.
+She seems OK now.	Nıka a ya rınd asena.
+Someone has died.	Jew merd.
+That's his house.	No keye ê eyo.
+They went inside.	Ê şi zerre.
+They were scared.	Ê tersaybi.
+Tom isn't hungry.	Tom veyşan nio.
+Tom works nights.	Tom bê şew gırweyeno.
+We want you here.	Ma to tiyad wazenê.
+We're still here.	Ma yê hewna tiyadê.
+What did you say?	To se va?
+What does it say?	O yo se vano?
+You can sit here.	Tı tiyad şenê roşê.
+Go to Tom's house.	Şo ké Tomi.
+He has green eyes.	Çımé ey kıh'oê.
+I was on the road.	Ez rayra biya.
+Is somebody there?	Ujad kes esto?
+Is your wife home?	Cıniya to keyeda?
+They want it back.	Ê ey peyd wazené.
+This one is on me.	Nafın mı ra yo.
+Tom has gone away.	Tom şi duri.
+Tom likes singing.	Tom dêri vatış ra hes keno.
+Tom looked inside.	Tom ewna zerre.
+Tom loves to fish.	Tom mase tepıştışra hes keno.
+Tom will stop you.	Tomdo to vınderno.
+We'll be together.	Madê piyad bê.
+Who is this woman?	Na ceni kama?
+Don't you remember?	To viri nino?
+Get it out of here.	Ey tiyara vecê.
+Get me up at eight.	Mı h'eşt werzané.
+He was alone there.	O ucadê tenya bi.
+Here comes Tom now.	Tom'o nika yeno.
+I can't lie to you.	Ez nê şena torê zuri vaca.
+I don't work today.	Ez evro né gırweyena.
+I haven't told Tom.	Mı Tomi ra nê va.
+I'm going to do it.	Ezo ey bıkera.
+I'm not dead, am I?	Ez merde niya, né?
+Look! She's coming!	Bewni! Aya yena!
+My knife is broken.	Kardiya mı şıkıteya.
+She has green eyes.	Çımê ay kıh'oê.
+Tom didn't see you.	Tom to né vina.
+Tom isn't like you.	Tom zey toya niyo.
+Tom was a nice man.	Tom merdémo rınd bi.
+We can protect you.	Ma şené qayte é to bé.
+We saw you come in.	Ma zerre dekevtış ê to di.
+We'll be neighbors.	Madê embıryan bé.
+We'll finish later.	Ma yê dıma bê qedinê.
+We're waiting, Tom.	Ma yê pawenê, Tom.
+Where does he work?	O kotid gırweyeno?
+Which house is his?	Kanci keye é eyo?
+Who are you people?	Şıma kamê?
+Who did this first?	Kami sıfte no ke?
+Who is your mother?	Ma to kama?
+Why did they do it?	Qandê çıçi ina o ke?
+Don't be frightened.	Me tersê.
+He's taller than me.	O mı ra dergêro.
+Hey, don't stop now.	La nıka mêvınderê.
+His dream came true.	Hevné ey bé raşt.
+How old is your dog?	Kûtıkê to çend serreyo?
+Mary has a headache.	Sere yé Mary teweno.
+Please drive slowly.	Hêdi bê ramê.
+Stay away from this.	Neyra duri kew.
+What do you do here?	Tı yê tiyad sekenê?
+Your father is tall.	Piyê to dergo.
+Can we talk tomorrow?	Ma meşt qısey bé kerı beno?
+Go tell him yourself.	Şo eyrê bê xû vac.
+Has anything changed?	Qe çiyê vırya?
+He is about to leave.	O yo keno şıro.
+How did you break it?	To no seni şıkıt?
+I don't speak to Tom.	Ez Tomi ya qısey nê kena.
+I sent Tom back home.	Mı Tom peyd rışt keye.
+I think Tom is crazy.	Mı rê kê Tom xinto.
+I wanted to go there.	Mı waştê şıra uja.
+I'll bring it to you.	Ezo ey torê biyara.
+I'm twelve years old.	Ez dıwês serre ya.
+Nobody understood me.	Kesi mı fea'm né kerd.
+Nobody wants to come.	Kes nê wazeno bêro.
+Nothing can stop him.	Qe çiyê nê şeno ey vındarno.
+She likes these cats.	A nê pısinga ra heskena.
+Thanks to all of you.	Şıma pêro weş bê.
+The house was silent.	Keye bêveng bi
+They didn't say that.	İna no nê va.
+This door won't shut.	No kêber nê gêryeno.
+This is a nice place.	Tiya cayêndê weşo.
+Tom is short and fat.	Tom kılm u qelawo.
+Tom knocked him down.	Tomi ey da erro.
+Tom ran out of water.	Awa Tomi qedya.
+Tom will protect you.	Tomdo qayte é to bo.
+What are they saying?	É yé se vané?
+What are we here for?	Qandi çé maé tiyad?
+What were you eating?	To çıçi werdé?
+Why did you say that?	Qandê çê to ey va?
+You'll die out there.	Tıdo ujad bı meré.
+You're not my father.	Tı piyê mı niyé.
+He will come tomorrow.	O do meşt bêro.
+How old is your uncle?	Apé to çend serreyo?
+I am talking with Tom.	Eza Tomiya qısey kena.
+I ate with my parents.	Mı ma u pi yê xuya piya we.
+I bought them for you.	Mı ina qandê to erina.
+I don't have any debt.	Qe deynê mı çınyo?
+I know you're in here.	Ez zana tı yê tiyad.
+I never saw her again.	Mı fına ay qe nê di.
+My mommy went outside.	Maya mı şi teber.
+My parents don't know.	Ma u piyê mı nê zanê.
+There was no one home.	Ucad keyey çı nêbi.
+They're expecting you.	Ê yê to pawenê.
+Tom is taller than me.	Tom mı ra dergériyo.
+Tom said he'd be here.	Tomi va ezo ujad ba.
+Tom wanted to sell it.	Tom waştê ey bê roşo.
+Tom was sitting there.	Tom ucad ronışté.
+Tom will be home soon.	Nezdid Tomdo keyed bo.
+Are you doing anything?	Tı yé çi yé kené?
+Come and sit over here.	Bé tiyad roş.
+Do you like my clothes?	Çına émı weşté to şıno?
+Do you want to do this?	Tı qayılé ney bé keré?
+He will not come today.	O do ewro nê ro.
+He will soon come back.	Nezdid o do pey béro.
+His son died last year.	Lacê ey par merd.
+I knew you'd come back.	Mı zanayé şıma do peyd béré.
+I'm taking you with me.	Eza to xûd bena.
+Is Tom out of his mind?	Tom xinto?
+Keep your hands off me.	Desté xu mıra bancı.
+Let's take Tom with us.	Ma Tom'i xud beré.
+Never tell a lie again.	Qe fına zuri mekê.
+No one can stop me now.	Nıka kes nê şeno mı vındarno.
+She held my arm firmly.	Ay destê mı pêta tepışt.
+The girl walked slowly.	Keynek hêdi xu pay şi.
+Tom only saw Mary once.	Tom fıné tenya Mary di.
+Tom will never give up.	Tomdo qe fek nê verado.
+What's this dog's name?	Name yé no kûtıki çı çio?
+What's your wife's job?	Cıniya to çé kar kena?
+Why is your mouth open?	Çıré feké to akerdeo?
+Are you lying right now?	Tı nıka derg biyé raşt?
+He is afraid of the dog.	O kûtıki ra terseno.
+I couldn't make it stop.	Mı né şayé ey vındernayé.
+I don't like Tom at all.	Ez Tomra qe hes nê kena.
+Tell me that was a joke!	Mırê vac na kûşat bi!
+The sky is getting dark.	Azmêno beno tari.
+They'll know what to do.	Ê dê bê zanê ê dê sekerê.
+Tom and I will help you.	Tom u ez mayê dest bıdê to.
+Tom didn't buy anything.	Tom çiyé né erina?
+Tom took some food home.	Tomi tayn şami berd keye.
+What are we looking for?	Mayê geyrenê çı?
+You can go to sleep now.	Nıka tı şenê şırê rakewê.
+Do you have dinner plans?	Qandi şamiya şani to sered çiyı esto?
+Do you like your brother?	Tı bırayê xû ra hes kenê?
+Everybody laughed at Tom.	Pêro huway Tomi.
+He will go in your place.	O do şıro cayê to.
+I don't want you to stay.	Ez nê wazena tı bê manê.
+I want to come back here.	Ez wazena peyd bê ra tiya.
+It's a game for children.	Na kay qandé qeçana.
+Owls are active at night.	Kundi şew vıcéné.
+Tom didn't laugh, did he?	Tom nê huwa, nê?
+Tom played with his kids.	Tom qeçana kay kerd.
+Tom says he's not hungry.	Tom vano ez veyşan niya.
+We can't all be like you.	Ma pêro zey to nê şenê bıbê.
+Where does he want to go?	O wazeno şıro koti?
+Why did Tom leave Boston?	Çıré Tom Boston'ra abırya?
+Could you show me the way?	Mı ré ray mısnené?
+I don't feel at all tired.	Ez qe edizyaye niya.
+I hope you don't get lost.	Boka tı vıni nê bê.
+I'm hungry. How about you?	Ez veyşana. ya tı?
+Let somebody else do this.	Verad wa juna ney bê kero.
+Take either of the apples.	Sayanra juweri bigi.
+That's true too, isn't it?	No zi raşto, nê?
+Tom is your son, not mine.	Tom lajé to yo, é mé nio.
+Tom told me you were here.	Tomi mıré va tı yé tiyad.
+Tom will soon be a father.	Tomdo nezdid bıbo pi.
+We heard the door closing.	Grotışé kéveri ma pey hesyay.
+We want to speak with Tom.	Ma qayılé Toma qısey bé keré.
+Where did you see the boy?	To lajek kotid di?
+Who did you get this from?	To no kami ra gırot?
+You missed me, didn't you?	To beriya mı kerda, nê?
+You're in the right place.	Tiyé cayı raşt.
+Come back and see us again.	Peyd bé u fına ma bıviné.
+Don't move till I get back.	Heta ez peyd nê ra cayê me leqê.
+Have we forgotten anything?	Ma qe çi yê xû vira ke?
+Have you ever milked a cow?	To qe şıtê manga dıto.
+He didn't tell me his name.	Ey mıré name é xü né va.
+Last night, I didn't sleep.	Bişew, Ez nê rakewta.
+What did you say yesterday?	Vızêr to se va?
+Can you come back on Monday?	Tı dışeme şenê peyd bêrê?
+He has holes in his clothes.	Çına é eyd qulli esté.
+I can't wait until tomorrow.	H'eta meşt ez nê şena bê pawa.
+I want to go home and sleep.	Ez wazena şıra keye u rakewa.
+I'll be seventeen next year.	Serrna ezo hevtês serre ba.
+I'm older than your brother.	Ez bırayê to ra pila.
+No one has heard about this.	Kesi no né pey hesyao.
+Now I don't know what to do.	Nıka nézana ké ez sekera.
+Tom, I'm doing this for you.	Tom, eza ney qandê to kena.
+We don't know what Tom said.	Ma nê zanê Tomi se va.
+Will you come back tomorrow?	Tı do meşt peyd bêrê?
+Are all of them your friends?	é péro émbazé to yé?
+Did you do this all yourself?	Nê pêroy to tenya ke?
+Few people speak my language.	Tayn merdémi zuwanémı qısey kené.
+He wants to eat both of them.	O wazeno hordınazi buro.
+I didn't understand the joke.	Mı na kuşatra fe'am nê ke.
+I saw her just the other day.	Mı a çend roci veri di.
+I want to grow old with Mary.	Ez wazena ké Mary a piya kal ba.
+I want to try riding a horse.	Ez qayila dınıştışé ıstoré cerıbna.
+I wash my hands before lunch.	Verê şamia dihir ez desté xu şıwena.
+My cat is sleeping on my bed.	Pısingamı aya cay mı sero rakewna.
+They are eating their apples.	Ê yê sayê xû wenê.
+They just taught me to swear.	İna mırê nengi çinayış mısna.
+What's going to happen today?	Ewro do sebo?
+Why don't you talk to us now?	Nıka qandê çê tı yé maya qısey nê kenê?
+Are you going to stay with us?	Tıdo maya piya bê manê?
+Do you remember what she said?	Ay seva yeno to viri?
+Do you think it'll rain today?	To rê kê evrodo şılli bo?
+How did you know Tom was sick?	To koti ra zana kê Tom nêweşo.
+I can't do any more than this.	Ney ra veşi ez néşena bıkera.
+I can't do anything like that.	Zey ney çi ez néşena vıraza.
+The cat got through the hedge.	Pısing perçin ra ravêrd.
+The road goes north from here.	Na ray tiyara vera rocawan şına.
+Wait for me next to that tree.	Na dar het mé bé paw.
+We're eating dinner right now.	Ma yê nıka nanê şani wenê.
+What do you think Tom will do?	To rê kê Tomdo sekero?
+Do you want me to tell you why?	Tı wazenê qandê çiyo ez to rê vaca?
+He taught me everything I know.	Çi yo kê ez zana pêro ey musna mı ra.
+How did you come to hear of it?	Seni to o pey h'esiyai?
+I brought some friends with me.	Çend ımbazi mı xud ard.
+I didn't forget about you, Tom.	Mı to xû viri nê ke, Tom.
+I think I'm going to get fired.	Mı rê kê ezo bê qewirya.
+I'll never forget what you did.	O ké to kerd ezo qet xu viri nékera.
+This old house is made of wood.	No bano k'han darra vırazyayo.
+Tom said Mary was his daughter.	Tomi va Mary keynaya ê ya.
+You think I'm crazy, don't you?	To rê kê ez xinta, wuni niyo?
+He threw a stone at the big dog.	Ey si eşt kûtıkêndo gırd ra.
+He told me to speak more slowly.	Ey mı rê va tayna hêdi qısey bık.
+I don't know how old Tom is now.	Ez nê zana Tom nıka çend serre yo?
+I forgot you don't like carrots.	Mı xû viri ke tı buncikanra hes nê kenê.
+I remember seeing you somewhere.	Mı viri yeno mı to cayêdê diyo.
+I'll tell you what I want to do.	Eza to rê vaci ez qayıla sekera.
+The cat which you found is mine.	A ké pisinga to diya a émına.
+Tom stayed there for three days.	Tom ujad hirê roci mend.
+If it doesn't rain, let's go out.	Varış nê bose ma bı vıcyê teber.
+Uncle Tom is my mother's brother.	Xalo Tom béra yé ma émıno.
+Where is it that Tom wants to go?	O ké Tom o wazeno şıro kotiyo?
+I will give you anything you want.	Tı çıçi bı wazé edo ey bıda to.
+Where did you take your shoes off?	To kotid sewl ê xu veti?
+Why don't you be quiet and listen?	Qandê çê şımayê bêveng nê benê u goştari nê kenê?
+I want you to come with us tonight.	Ez wazena emşo tı ma ya piya bêrê.
+Wait. I want to show you something.	Bêpaw. Ez wazena çi yê to bê mısna.
+What did you say? I can't hear you.	To se va? Néşena aşnaw kera.
+Can any of you tell me where Tom is?	Şımara ju şeno mı ré vaco Tom kotido?
+I closed my eyes and turned my head.	Mı çımê xû groti u sereyi xû tada.
+I don't want to do anything tonight.	Emşo ez nê wazena çiyê bé kera.
+Tom killed himself three months ago.	Tomi hiré mengi veri xu kışt.
+I think Tom and Mary like each other.	Mırékı Tom u Mary péra h'eskené.
+I want to know why you're doing this.	Ez qayıla bé mısa qandé çé tı yé ney kené.
+I'm so hungry that I could eat a horse.	Ez hend veyşana kê şena ıstoré bura.
+My father is so old that he can't work.	Qandé gırweynayén piyémı bol kokémo.
+The boy and the man are drinking water.	Lacek u mêrdeko aw şımeno.
+I'm ashamed to go out dressed like this.	Ez şermayaya bıvıjya teber, cınayo wunasi daya xura.
+It's been ten years since my father died.	Mergé pi é mı ra des ser'i o ravérd.
+I have one thousand and five hundred cows.	Hezar u panc sei mangeyi mı estê.
+Do you know whether Tom is married or single?	Tı zevıcyaye yê yazi azebê?
+Don't worry. I'll look after your dog for you.	Me qehri. Qandê to ezo bewniya kutıki to.
+My father is two years younger than my mother is.	Piyé mı ma mı ra dı serri kıjo.
